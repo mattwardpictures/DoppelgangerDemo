@@ -1,5 +1,8 @@
 package com.facextest.DoppelgangerDemo;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -31,16 +34,19 @@ public class FaceController {
 		headers.add(userID, "7041acf0f54c5cf35f63");
 		headers.add(userKey, "489896a4897f8b99af2c");
 		headers.add("Content-Type", MediaType.APPLICATION_FORM_URLENCODED_VALUE);
-		headers.set(firstFace,
+		faceDet = 1;
+
+		Map<String, String> params = new HashMap<>();
+		params.put("img_1",
 				"https://66.media.tumblr.com/2af17debcc458e1f77f975035c760de2/tumblr_n7hlzmhKqa1sxrvmko1_1280.jpg");
-		headers.set(secondFace,
+		params.put("img_2",
 				"https://66.media.tumblr.com/81bdaed659fbd2cb32362b766af44e02/tumblr_n5vjnxBU8v1rjw5kqo1_500.png");
 
 		HttpEntity<String> entity = new HttpEntity<>("parameters", headers);
 		String url = "https://facex-facex-v1.p.rapidapi.com/compare_faces?bboxes_1=50%2C100%2C150%2C200&bboxes_2=52%2C102%2C150%2C200&face_det="
 				+ faceDet;
 
-		ResponseEntity<FaceMatcher> response = rt.exchange(url, HttpMethod.POST, entity, FaceMatcher.class);
+		ResponseEntity<FaceMatcher> response = rt.exchange(url, HttpMethod.POST, entity, FaceMatcher.class, params);
 
 		FaceMatcher faceMatch = response.getBody();
 
