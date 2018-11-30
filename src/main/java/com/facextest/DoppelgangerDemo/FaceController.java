@@ -23,18 +23,18 @@ public class FaceController {
 	@Value("${rapidapi.key}")
 	String faceKey;
 
-	@RequestMapping("/face")
-	public ModelAndView compareFace(@RequestParam("user_id") String userID, @RequestParam("user_key") String userKey,
+	@RequestMapping("index")
+	public ModelAndView compareFace(@RequestParam("user_id") String user_id, @RequestParam("user_key") String user_key,
 			@RequestParam("img_1") String img_1, @RequestParam("img_2") String img_2,
-			@RequestParam("face_det") int faceDet) {
+			@RequestParam("face_det") int face_det) {
 
 		RestTemplate rt = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("X-RapidAPI-Key", faceKey);
-		headers.add(userID, "7041acf0f54c5cf35f63");
-		headers.add(userKey, "489896a4897f8b99af2c");
+		headers.add(user_id, "7041acf0f54c5cf35f63");
+		headers.add(user_key, "489896a4897f8b99af2c");
 		headers.add("Content-Type", MediaType.APPLICATION_FORM_URLENCODED_VALUE);
-		faceDet = 1;
+		face_det = 1;
 
 		Map<String, String> params = new HashMap<>();
 		params.put("img_1",
@@ -44,13 +44,13 @@ public class FaceController {
 
 		HttpEntity<String> entity = new HttpEntity<>("parameters", headers);
 		String url = "https://facex-facex-v1.p.rapidapi.com/compare_faces?bboxes_1=50%2C100%2C150%2C200&bboxes_2=52%2C102%2C150%2C200&face_det="
-				+ faceDet;
+				+ face_det;
 
 		ResponseEntity<FaceMatcher> response = rt.exchange(url, HttpMethod.POST, entity, FaceMatcher.class, params);
 
 		FaceMatcher faceMatch = response.getBody();
 
-		System.out.println(response);
+		System.out.println(faceMatch);
 
 		return new ModelAndView("index", "face", faceMatch);
 
