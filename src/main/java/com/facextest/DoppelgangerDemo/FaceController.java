@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.facextest.DoppelgangerDemo.entity.FaceMatcher;
+import com.facextest.DoppelgangerDemo.entity.FaceResult;
 
 @Controller
 public class FaceController {
@@ -41,9 +41,9 @@ public class FaceController {
 		HttpEntity<String> entity = new HttpEntity<>("parameters", headers);
 		String url = "https://facex-facex-v1.p.rapidapi.com/compare_faces?bboxes_1=50%2C100%2C150%2C200&bboxes_2=52%2C102%2C150%2C200&face_det=1";
 
-		ResponseEntity<FaceMatcher> response = rt.exchange(url, HttpMethod.POST, entity, FaceMatcher.class, params);
+		ResponseEntity<FaceResult> response = rt.exchange(url, HttpMethod.POST, entity, FaceResult.class, params);
 
-		FaceMatcher faceMatch = response.getBody();
+		FaceResult faceMatch = response.getBody();
 
 		System.out.println(faceMatch);
 
