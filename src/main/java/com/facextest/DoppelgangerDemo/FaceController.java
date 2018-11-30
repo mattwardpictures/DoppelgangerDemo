@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.facextest.DoppelgangerDemo.entity.FaceResult;
+import com.facextest.DoppelgangerDemo.entity.FaceMatcher;
 
 @Controller
 public class FaceController {
@@ -34,16 +34,16 @@ public class FaceController {
 
 		Map<String, String> params = new HashMap<>();
 		params.put("img_1",
-				"https://66.media.tumblr.com/2af17debcc458e1f77f975035c760de2/tumblr_n7hlzmhKqa1sxrvmko1_1280.jpg");
+				"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Mohanlal_Viswanathan_Nair_BNC.jpg/240px-Mohanlal_Viswanathan_Nair_BNC.jpg");
 		params.put("img_2",
-				"https://66.media.tumblr.com/81bdaed659fbd2cb32362b766af44e02/tumblr_n5vjnxBU8v1rjw5kqo1_500.png");
+				"https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/Mohanlal_DN_0.jpg?itok=rosZJnyx");
 
 		HttpEntity<String> entity = new HttpEntity<>("parameters", headers);
 		String url = "https://facex-facex-v1.p.rapidapi.com/compare_faces?bboxes_1=50%2C100%2C150%2C200&bboxes_2=52%2C102%2C150%2C200&face_det=1";
 
-		ResponseEntity<FaceResult> response = rt.exchange(url, HttpMethod.POST, entity, FaceResult.class, params);
+		ResponseEntity<FaceMatcher> response = rt.exchange(url, HttpMethod.POST, entity, FaceMatcher.class, params);
 
-		FaceResult faceMatch = response.getBody();
+		FaceMatcher faceMatch = response.getBody();
 
 		System.out.println(faceMatch);
 
