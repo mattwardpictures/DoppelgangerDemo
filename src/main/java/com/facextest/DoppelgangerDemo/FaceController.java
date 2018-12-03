@@ -64,7 +64,7 @@ public class FaceController {
 		headers.add("Content-Type", MediaType.APPLICATION_JSON_VALUE);
 		
 		HttpEntity<String> entity = new HttpEntity<>("parameters", headers);
-		String url = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize\";
+		String url = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize";
 		
 		ResponseEntity<FaceResult> response = rt.exchange(url, HttpMethod.POST, entity, FaceResult.class, params);
 		
