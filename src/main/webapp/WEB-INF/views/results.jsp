@@ -9,9 +9,8 @@
 	</head>
 	<body>
 	
-	
 		<div class="container">
-		
+			${results}
 		
 		</div>
 	

@@ -25,7 +25,7 @@
      </form>
   
   		
-			${face}
+			<a href="getresults">Get Results</a>
 		
 		
 	
