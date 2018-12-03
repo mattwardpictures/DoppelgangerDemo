@@ -19,15 +19,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class FaceController {
 
-//	@Value("${rapidapi.key}")
-//	String faceKey;
 	@Value("${subscription.key}")
 	String subscriptionKey;
 	@Value("${uri.base}")
 	private static final String uriBase = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect";
 
-	private static final String imageWithFaces = "{\"url\":\"https://upload.wikimedia.org/wikipedia/commons/c/c3/RH_Louise_Lillian_Gish.jpg\"}";
-	private static final String faceAttributes = "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise";
+	private static final String imageWithFaces = "{\"url\":\"https://mir-s3-cdn-cf.behance.net/project_modules/1400/a150b671389927.5bc42dc910495.jpg\"}";
+	private static final String faceAttributes = "emotion";
 
 	@RequestMapping("/")
 	public ModelAndView index() {
@@ -82,14 +80,7 @@ public class FaceController {
 			// Display error message.
 			System.out.println(e.getMessage());
 		}
-//		RestTemplate rt = new RestTemplate();
-//		HttpHeaders headers = new HttpHeaders();
-//		// headers.add("X-RapidAPI-Key", faceKey);
-//		headers.add("Ocp-Apim-Subscription-Key", subscriptionKey);
-//		headers.add("Content-Type", MediaType.APPLICATION_FORM_URLENCODED_VALUE);
-//
-//		HttpEntity<String> entity = new HttpEntity<>("parameters", headers);
-//		String url = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize";
+
 		return new ModelAndView("results", "results", jsonString);
 	}
 }
