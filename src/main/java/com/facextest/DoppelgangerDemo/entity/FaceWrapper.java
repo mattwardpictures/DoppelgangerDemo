@@ -5,28 +5,28 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class FaceWrapper {
 
-	private Emotion emotion;
+	private FaceAttributes faceAttributes;
 
 	public FaceWrapper() {
 
 	}
 
-	public FaceWrapper(Emotion emotion) {
+	public FaceWrapper(FaceAttributes faceAttributes) {
 		super();
-		this.emotion = emotion;
+		this.faceAttributes = faceAttributes;
 	}
 
-	public Emotion getEmotion() {
-		return emotion;
+	public FaceAttributes getFaceAttributes() {
+		return faceAttributes;
 	}
 
-	public void setEmotion(Emotion emotion) {
-		this.emotion = emotion;
+	public void setFaceAttributes(FaceAttributes faceAttributes) {
+		this.faceAttributes = faceAttributes;
 	}
 
 	@Override
 	public String toString() {
-		return "FaceWrapper [emotion=" + emotion + "]";
+		return "FaceWrapper [faceAttributes=" + faceAttributes + "]";
 	}
 
 }
