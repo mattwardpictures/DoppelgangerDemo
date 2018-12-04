@@ -7,6 +7,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -28,9 +29,10 @@ public class FaceController {
 	}
 
 	@RequestMapping("/getresults")
-	public ModelAndView compareFace() throws UnsupportedEncodingException {
+	public ModelAndView compareFace(@RequestParam("file")String file) throws UnsupportedEncodingException {
 		RestTemplate rT = new RestTemplate();
 
+		String imageWithFaces = "{\"url\":\"" + file + "\"}";
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Content-Type", "application/json");
 		headers.add("Ocp-Apim-Subscription-Key", subscriptionKey);

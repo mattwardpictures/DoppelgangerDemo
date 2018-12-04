@@ -15,17 +15,17 @@
   
 
 
-     <h3>File Upload:</h3>
-     Select a file to upload: <br />
-     <form action = "UploadServlet" method = "post"
-        enctype = "multipart/form-data">
-        <input type = "file" name = "file" size = "50" />
+     <h3>Analyze your picture:</h3>
+    
+     <form action = "getresults">
+        Your Name:<input type = "text" name = "username">
         <br />
+        Image Link: <input type = "text" name = "file">
         <input type = "submit" value = "Upload File" />
      </form>
   
   		
-			<a href="getresults">Get Results</a>
+			<!--<a href="getresults">Get Results</a>  -->
 		
 		
 	
