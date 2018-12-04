@@ -45,14 +45,14 @@ public class FaceController {
 			System.out.println(response[i]);
 		}
 
-		Double contempt = response[0].getFaceAttributes().getEmotion().getContempt();
-		Double surprise = response[0].getFaceAttributes().getEmotion().getSurprise();
-		Double happiness = response[0].getFaceAttributes().getEmotion().getHappiness();
-		Double neutral = response[0].getFaceAttributes().getEmotion().getNeutral();
-		Double sadness = response[0].getFaceAttributes().getEmotion().getSadness();
-		Double disgust = response[0].getFaceAttributes().getEmotion().getDisgust();
-		Double anger = response[0].getFaceAttributes().getEmotion().getAnger();
-		Double fear = response[0].getFaceAttributes().getEmotion().getFear();
+		Double contempt = 1*(response[0].getFaceAttributes().getEmotion().getContempt());
+		Double surprise = 2*(response[0].getFaceAttributes().getEmotion().getSurprise());
+		Double happiness = 3*(response[0].getFaceAttributes().getEmotion().getHappiness());
+		Double neutral = 4*(response[0].getFaceAttributes().getEmotion().getNeutral());
+		Double sadness = 5*(response[0].getFaceAttributes().getEmotion().getSadness());
+		Double disgust = 6*(response[0].getFaceAttributes().getEmotion().getDisgust());
+		Double anger = 7*(response[0].getFaceAttributes().getEmotion().getAnger());
+		Double fear = 8*(response[0].getFaceAttributes().getEmotion().getFear());
 
 		Double[] points = new Double[8];
 		points[0] = contempt;
@@ -66,6 +66,14 @@ public class FaceController {
 
 		Arrays.sort(points);
 		System.out.println(Arrays.toString(points));
+		
+		
+		Double score = points[7];
+	    int score2  =(int) Math.round(score);
+	    System.out.println(score2);
+		
+		
+		
 
 		return new ModelAndView("results", "results", response[0].getFaceAttributes().getEmotion());
 	}
