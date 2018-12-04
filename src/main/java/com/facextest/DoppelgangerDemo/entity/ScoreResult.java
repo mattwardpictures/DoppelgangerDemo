@@ -7,28 +7,28 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ScoreResult {
 
-	private List<Score> scores;
+	private List<Emotion> score;
 
 	public ScoreResult() {
 
 	}
 
-	public ScoreResult(List<Score> scores) {
+	public ScoreResult(List<Emotion> score) {
 		super();
-		this.scores = scores;
+		this.score = score;
 	}
 
-	public List<Score> getScores() {
-		return scores;
+	public List<Emotion> getScore() {
+		return score;
 	}
 
-	public void setScores(List<Score> scores) {
-		this.scores = scores;
+	public void setScore(List<Emotion> score) {
+		this.score = score;
 	}
 
 	@Override
 	public String toString() {
-		return "ScoreResult [scores=" + scores + "]";
+		return "ScoreResult [scores=" + score + "]";
 	}
 
 }
