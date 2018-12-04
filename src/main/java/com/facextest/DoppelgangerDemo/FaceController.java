@@ -1,6 +1,7 @@
 package com.facextest.DoppelgangerDemo;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -29,7 +30,7 @@ public class FaceController {
 	}
 
 	@RequestMapping("/getresults")
-	public ModelAndView compareFace(@RequestParam("file")String file) throws UnsupportedEncodingException {
+	public ModelAndView compareFace(@RequestParam("file") String file) throws UnsupportedEncodingException {
 		RestTemplate rT = new RestTemplate();
 
 		String imageWithFaces = "{\"url\":\"" + file + "\"}";
@@ -43,6 +44,28 @@ public class FaceController {
 		for (int i = 0; i < response.length; ++i) {
 			System.out.println(response[i]);
 		}
+
+		Double contempt = response[0].getFaceAttributes().getEmotion().getContempt();
+		Double surprise = response[0].getFaceAttributes().getEmotion().getSurprise();
+		Double happiness = response[0].getFaceAttributes().getEmotion().getHappiness();
+		Double neutral = response[0].getFaceAttributes().getEmotion().getNeutral();
+		Double sadness = response[0].getFaceAttributes().getEmotion().getSadness();
+		Double disgust = response[0].getFaceAttributes().getEmotion().getDisgust();
+		Double anger = response[0].getFaceAttributes().getEmotion().getAnger();
+		Double fear = response[0].getFaceAttributes().getEmotion().getFear();
+
+		Double[] points = new Double[8];
+		points[0] = contempt;
+		points[1] = surprise;
+		points[2] = happiness;
+		points[3] = neutral;
+		points[4] = sadness;
+		points[5] = disgust;
+		points[6] = anger;
+		points[7] = fear;
+
+		Arrays.sort(points);
+		System.out.println(Arrays.toString(points));
 
 		return new ModelAndView("results", "results", response[0].getFaceAttributes().getEmotion());
 	}
