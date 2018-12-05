@@ -20,6 +20,8 @@ public class Characters {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer characterID;
+	private String name;
+
 	@Column(name = "picture")
 	private String imgUrl;
 	private String movie;
@@ -31,6 +33,15 @@ public class Characters {
 
 	}
 
+	public Characters(Integer characterID, String name, String imgUrl, String movie, List<User> users) {
+		super();
+		this.characterID = characterID;
+		this.name = name;
+		this.imgUrl = imgUrl;
+		this.movie = movie;
+		this.users = users;
+	}
+
 	public Characters(Integer characterID, String imgUrl, String movie, List<User> users) {
 		super();
 		this.characterID = characterID;
@@ -39,6 +50,13 @@ public class Characters {
 		this.users = users;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 	public Integer getCharacterID() {
 		return characterID;
 	}

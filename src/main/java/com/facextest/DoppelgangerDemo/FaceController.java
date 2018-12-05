@@ -1,8 +1,8 @@
 package com.facextest.DoppelgangerDemo;
 
 import java.io.UnsupportedEncodingException;
-import java.util.Arrays;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -12,11 +12,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.facextest.DoppelgangerDemo.Repository.CharacterRepository;
 import com.facextest.DoppelgangerDemo.entity.FaceWrapper;
 
 @Controller
 public class FaceController {
 
+	@Autowired
+	CharacterRepository cR;
+	
 	@Value("${subscription.key}")
 	String subscriptionKey;
 	@Value("${uri.base}")
@@ -49,8 +53,13 @@ public class FaceController {
 	   
 		ModelAndView mv = new ModelAndView("results");
 		
+		double score =  getScore(response);
+		int score2 = (int) score;
+		
 		mv.addObject("score", getScore(response));
 		mv.addObject("results", response[0].getFaceAttributes().getEmotion());
+		mv.addObject("characters", cR.findById(score2));
+		
 		return mv;
 			
 	}
