@@ -77,7 +77,7 @@ public class FaceController {
 	}
 
 	@RequestMapping("/lastten")
-	public ModelAndView getEmotions() {
+	public ModelAndView getLastTenResults() {
 		
 
 		return new ModelAndView();

@@ -1,6 +1,7 @@
 package com.facextest.DoppelgangerDemo.entity;
 
-public class Character {
+
+public class Characters {
 
 	private Integer characterID;
 	private String imgUrl;
@@ -16,11 +17,11 @@ public class Character {
 	// foreign key in the User POJO.
 	private double overallScore;
 
-	public Character() {
+	public Characters() {
 
 	}
 
-	public Character(Integer characterID, String imgUrl, double contempt, double surprise, double happiness,
+	public Characters(Integer characterID, String imgUrl, double contempt, double surprise, double happiness,
 			double neutral, double sadness, double disgust, double anger, double fear, double overallScore) {
 		super();
 		this.characterID = characterID;
