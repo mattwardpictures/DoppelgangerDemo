@@ -30,14 +30,11 @@ public class User {
 	private double anger;
 	private double fear;
 
-	// This will be the foreign key...
-	// ...in the character POJO it will be the primary key
-	@Column(name = "overallscore")
 	private double overallScore;
 
 	@ManyToOne
 	// corresponds to character id
-	@JoinColumn(name = "overallScore", insertable = false, updatable = false)
+	@JoinColumn(name = "id", insertable = false, updatable = false)
 	private Characters characters;
 
 	public User() {

@@ -18,7 +18,7 @@ public class Characters {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "characterid")
+	@Column(name = "id")
 	private Integer characterID;
 	@Column(name = "picture")
 	private String imgUrl;
