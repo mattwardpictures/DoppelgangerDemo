@@ -18,7 +18,7 @@
      <h3>Analyze your picture:</h3>
     
      <form action = "getresults">
-        Your Name:<input type = "text" name = "username">
+        Your Name:<input type = "text" name = "username" placeholder = "First and Last Name">
         <br />
         Image Link: <input type = "text" name = "file">
         <input type = "submit" value = "Upload File" />
