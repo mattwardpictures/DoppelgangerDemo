@@ -52,6 +52,7 @@
 
 
 		</table>
+		<h1>Your score: ${score}</h1>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

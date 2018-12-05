@@ -22,7 +22,7 @@ public class FaceController {
 	@Value("${uri.base}")
 	private static final String uriBase = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=emotion";
 
-	private static final String imageWithFaces = "{\"url\":\"https://mir-s3-cdn-cf.behance.net/project_modules/1400/a150b671389927.5bc42dc910495.jpg\"}";
+	//private static final String imageWithFaces = "{\"url\":\"https://mir-s3-cdn-cf.behance.net/project_modules/1400/a150b671389927.5bc42dc910495.jpg\"}";
 
 	@RequestMapping("/")
 	public ModelAndView index() {
@@ -44,7 +44,18 @@ public class FaceController {
 		for (int i = 0; i < response.length; ++i) {
 			System.out.println(response[i]);
 		}
+		
+	 
+	   
+		ModelAndView mv = new ModelAndView("results");
+		
+		mv.addObject("score", getScore(response));
+		mv.addObject("results", response[0].getFaceAttributes().getEmotion());
+		return mv;
+			
+	}
 
+	private static Double getScore(FaceWrapper[] response) {
 		Double contempt = (response[0].getFaceAttributes().getEmotion().getContempt());
 		Double surprise = (response[0].getFaceAttributes().getEmotion().getSurprise());
 		Double happiness = (response[0].getFaceAttributes().getEmotion().getHappiness());
@@ -54,7 +65,7 @@ public class FaceController {
 		Double anger = (response[0].getFaceAttributes().getEmotion().getAnger());
 		Double fear = (response[0].getFaceAttributes().getEmotion().getFear());
 
-		double angerIndex = (contempt + disgust + anger) * 0.5;
+		double angerIndex = (contempt + disgust + anger) * 0.05;
 		double sadnessIndex = (sadness + fear) * 0.10;
 		double neutralIndex = neutral * 0.15;
 		double surpriseIndex = surprise * 0.20;
@@ -62,31 +73,12 @@ public class FaceController {
 
 		double overallScore = (angerIndex + sadnessIndex + neutralIndex + surpriseIndex + happinessIndex) * 100;
 
-		System.out.println("Score:" + overallScore);
-
-		Double[] points = new Double[8];
-		points[0] = contempt;
-		points[1] = surprise;
-		points[2] = happiness;
-		points[3] = neutral;
-		points[4] = sadness;
-		points[5] = disgust;
-		points[6] = anger;
-		points[7] = fear;
-
-		Arrays.sort(points);
-		System.out.println(Arrays.toString(points));
-
-		Double score = points[7];
-		int score2 = (int) Math.round(score);
-		System.out.println(score2);
-
-		return new ModelAndView("results", "results", response[0].getFaceAttributes().getEmotion());
+		return overallScore;
 	}
 
-	@RequestMapping("/emotionscore")
+	@RequestMapping("/lastten")
 	public ModelAndView getEmotions() {
-		RestTemplate rt = new RestTemplate();
+		
 
 		return new ModelAndView();
 	}
