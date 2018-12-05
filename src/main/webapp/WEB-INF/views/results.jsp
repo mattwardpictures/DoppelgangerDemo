@@ -11,7 +11,31 @@
 <body>
 
 	<div class="container">
-<h1>Emotion Score Breakdown</h1>
+		<div class = "row">
+			<div class = "col-md">
+			
+			</div>
+			<div class = "col-md">
+				<h1>Emotion Score Breakdown</h1>
+			</div>
+			<div class = "col-md">
+			
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-md">
+			
+			</div>
+			<div class = "col-md">
+				<canvas id = "radarChart" width="1280" height="700">
+					<script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/compiled-4.5.15.min.js"></script>
+				</canvas>
+			</div>
+			<div class = "col-md">
+			
+			</div>
+		</div>
+		
 		<table class="table">
 			<thead>
 				<tr>
@@ -30,21 +54,21 @@
 
 
 				<tr>
-					<td>${results.contempt}</td> 
+					<td id="contempt">${results.contempt}</td> 
 					
-					<td>${results.surprise}</td>
+					<td id="surprise">${results.surprise}</td>
 			
-					<td>${results.happiness}</td>
+					<td id="happiness">${results.happiness}</td>
 			
-					<td>${results.neutral}</td>
+					<td id="neutral">${results.neutral}</td>
 			
-					<td>${results.sadness}</td>
+					<td id="sadness">${results.sadness}</td>
 					
-					<td>${results.disgust}</td>
+					<td id="disgust">${results.disgust}</td>
 					
-					<td>${results.anger}</td>
+					<td id="anger">${results.anger}</td>
 					
-					<td>${results.fear}</td>
+					<td id="fear">${results.fear}</td>
 			
 
 				</tr>
@@ -54,6 +78,40 @@
 		</table>
 		<h1>Your score: ${score}</h1>
 	</div>
+	
+	<script>
+  		//radar
+	  var ctxR = document.getElementById("radarChart").getContext('2d');
+  		var contempt = ${results.contempt};
+  		var surprise = ${results.surprise};
+  		var happiness = ${results.happiness};
+  		var neutral = ${results.neutral};
+  		var sadness = ${results.sadness};
+  		var disgust = ${results.disgust};
+  		var anger = ${results.anger};
+  		var fear = ${results.fear};
+	  var myRadarChart = new Chart(ctxR, {
+	    type: 'radar',
+	    data: {
+	      labels: ["Contempt", "Surprise", "Happiness", "Neutral", "Sadness", "Disgust", "Anger", "Fear"],
+	      datasets: [{
+	          label: "Emotional Map",
+	          data: [contempt, surprise, happiness, neutral, sadness, disgust, anger, fear],
+	          backgroundColor: [
+	            'rgba(105, 0, 132, .2)',
+	          ],
+	          borderColor: [
+	            'rgba(200, 99, 132, .7)',
+	          ],
+	          borderWidth: 2
+	        }]
+	    },
+	    options: {
+	      responsive: true
+	    }
+	  });
+
+	</script>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
