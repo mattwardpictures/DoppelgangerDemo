@@ -37,7 +37,7 @@ public class User {
 
 	@ManyToOne
 	// corresponds to character id
-	@JoinColumn(name = "characterid", insertable = false, updatable = false)
+	@JoinColumn(name = "overallScore", insertable = false, updatable = false)
 	private Characters characters;
 
 	public User() {

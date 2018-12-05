@@ -24,6 +24,17 @@
         <input type = "submit" value = "Upload File" />
      </form>
   
+  <div class ="container">
+<script type="text/javascript">
+tinypic_layout = 'narrow';
+tinypic_type = 'both';
+tinypic_links = 'url';
+tinypic_language = 'en';
+tinypic_search = 'true';
+tinypic_autoload = true;
+</script>
+<script src="http://plugin.tinypic.com/j/plugin.js" type="text/javascript"></script>
+</div>
   		
 			<!--<a href="getresults">Get Results</a>  -->
 		
