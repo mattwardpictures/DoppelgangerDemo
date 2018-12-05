@@ -1,9 +1,25 @@
 package com.facextest.DoppelgangerDemo.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "users")
 public class User {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
+	@Column(name = "userid")
 	private Integer userID;
 	private String name;
+	@Column(name = "urlpath")
 	private String imgUrl;
 	private double contempt;
 	private double surprise;
@@ -13,9 +29,16 @@ public class User {
 	private double disgust;
 	private double anger;
 	private double fear;
+
 	// This will be the foreign key...
 	// ...in the character POJO it will be the primary key
+	@Column(name = "overallscore")
 	private double overallScore;
+
+	@ManyToOne
+	// corresponds to character id
+	@JoinColumn(name = "characterid", insertable = false, updatable = false)
+	private Characters characters;
 
 	public User() {
 
