@@ -58,7 +58,9 @@ public class FaceController {
 		
 		mv.addObject("score", getScore(response));
 		mv.addObject("results", response[0].getFaceAttributes().getEmotion());
-		mv.addObject("characters", cR.findById(score2));
+		mv.addObject("ch", cR.findById(score2));
+		
+		
 		
 		return mv;
 			

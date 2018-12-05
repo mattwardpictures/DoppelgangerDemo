@@ -116,8 +116,8 @@
 		
 		
 	
-		${characters.name}
-		${characters.movie}
+		${ch.name}
+		${ch.movie}
 	
 		
 	
