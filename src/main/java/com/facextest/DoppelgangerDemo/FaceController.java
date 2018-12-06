@@ -20,13 +20,14 @@ public class FaceController {
 
 	@Autowired
 	CharacterRepository cR;
-	
+
 	@Value("${subscription.key}")
 	String subscriptionKey;
 	@Value("${uri.base}")
 	private static final String uriBase = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=emotion";
 
-	//private static final String imageWithFaces = "{\"url\":\"https://mir-s3-cdn-cf.behance.net/project_modules/1400/a150b671389927.5bc42dc910495.jpg\"}";
+	// private static final String imageWithFaces =
+	// "{\"url\":\"https://mir-s3-cdn-cf.behance.net/project_modules/1400/a150b671389927.5bc42dc910495.jpg\"}";
 
 	@RequestMapping("/")
 	public ModelAndView index() {
@@ -48,22 +49,18 @@ public class FaceController {
 		for (int i = 0; i < response.length; ++i) {
 			System.out.println(response[i]);
 		}
-		
-	 
-	   
+
 		ModelAndView mv = new ModelAndView("results");
-		
-		double score =  getScore(response);
+
+		double score = getScore(response);
 		int score2 = (int) score;
-		
+
 		mv.addObject("score", getScore(response));
 		mv.addObject("results", response[0].getFaceAttributes().getEmotion());
-		mv.addObject("ch", cR.findById(score2));
-		
-		
-		
+		mv.addObject("ch", cR.findById(score2).orElse(null));
+
 		return mv;
-			
+
 	}
 
 	private static Double getScore(FaceWrapper[] response) {
@@ -89,7 +86,6 @@ public class FaceController {
 
 	@RequestMapping("/lastten")
 	public ModelAndView getLastTenResults() {
-		
 
 		return new ModelAndView();
 	}

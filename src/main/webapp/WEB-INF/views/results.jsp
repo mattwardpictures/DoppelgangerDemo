@@ -114,12 +114,24 @@
 	</script>
 	
 		
+		<table>
+		<thead>
+		<tr>
+		<td>Character</td>
+		<td>Picture</td>
+		<td>Movie</td>
+		</tr>
 		
-	
-		${ch.name}
-		${ch.movie}
-	
+		</thead>
+	<tbody>
+	<tr>
+		<td>${ch.name}</td>
+		<td><img src = "${ch.imgUrl}" width = "200px" height = "200px"></td>
+		<td>${ch.movie}<td>
 		
+		</tr>
+	</tbody>
+		</table>
 	
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
