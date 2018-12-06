@@ -53,7 +53,7 @@ public class FaceController {
 		ModelAndView mv = new ModelAndView("results");
 
 		double score = getScore(response);
-		int score2 = (int) score;
+		int score2 = (int)Math.round(score);
 
 		mv.addObject("score", getScore(response));
 		mv.addObject("results", response[0].getFaceAttributes().getEmotion());
