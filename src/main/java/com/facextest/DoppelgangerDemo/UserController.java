@@ -17,9 +17,9 @@ public class UserController {
 	UserRepository uR;
 	
 
-	@RequestMapping("/lastten")
-	public ModelAndView addUser(User u1, @RequestParam("username") String name, @RequestParam("file") String imgUrl, @RequestParam("score") double overallScore, @RequestParam("score2") Integer characterID) {
-		u1 = new User(name,imgUrl,overallScore,characterID);
+	@RequestMapping("/addUser")
+	public ModelAndView addUser(@RequestParam("username") String name, @RequestParam("file") String imgUrl, @RequestParam("score") double overallScore, @RequestParam("score2") Integer characterID) {
+		User u1 = new User(name,imgUrl,overallScore,characterID);
 		uR.save(u1);
 		return new ModelAndView();
 

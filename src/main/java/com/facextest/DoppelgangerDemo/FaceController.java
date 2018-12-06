@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.facextest.DoppelgangerDemo.Repository.CharacterRepository;
 import com.facextest.DoppelgangerDemo.entity.FaceWrapper;
+import com.facextest.DoppelgangerDemo.entity.User;
 
 @Controller
 public class FaceController {
@@ -29,13 +30,15 @@ public class FaceController {
 	// private static final String imageWithFaces =
 	// "{\"url\":\"https://mir-s3-cdn-cf.behance.net/project_modules/1400/a150b671389927.5bc42dc910495.jpg\"}";
 
+	
+	User user;
 	@RequestMapping("/")
 	public ModelAndView index() {
 		return new ModelAndView("index");
 	}
 
 	@RequestMapping("/getresults")
-	public ModelAndView compareFace(@RequestParam("name") String name,@RequestParam("file") String file) throws UnsupportedEncodingException {
+	public ModelAndView compareFace(@RequestParam("username") String name, @RequestParam("file") String file) throws UnsupportedEncodingException {
 		RestTemplate rT = new RestTemplate();
 
 		String imageWithFaces = "{\"url\":\"" + file + "\"}";
@@ -58,6 +61,11 @@ public class FaceController {
 		mv.addObject("score", getScore(response));
 		mv.addObject("results", response[0].getFaceAttributes().getEmotion());
 		mv.addObject("ch", cR.findById(score2).orElse(null));
+		
+		mv.addObject("user", name);
+		mv.addObject("url", file);
+		
+		
 
 		return mv;
 

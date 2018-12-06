@@ -128,10 +128,10 @@
 		</table>
 		
 		<form action="addUser">
-		<input type="hidden" name="name" value="${username}">
-		<input type="hidden" name="file" value="${imgurl}">
+		<input type="hidden" name="username" value="${user}">
+		<input type="hidden" name="file" value="${url}">
 		<input type="hidden" name="score" value="${score}">
-		<input type="hidden" name="score2" value="${ch.id}">
+		<input type="hidden" name = "score2" value="${ch.characterID}">
 		<input class="btn btn-primary" type="Submit" value="Save Results">
 		
 		
