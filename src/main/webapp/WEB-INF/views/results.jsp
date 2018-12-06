@@ -108,7 +108,8 @@
 	</script>
 	
 		
-		<table>
+		<table class="table">
+		
 		<thead>
 		<tr>
 		<td>Character</td>

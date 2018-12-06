@@ -17,8 +17,11 @@
 			<thead>
 				<tr>
 					<td>Name</td>
-					<td>Character</td>
+					<td>Photo</td>
 					<td>Score</td>
+					<td>Character Name</td>
+					<td>Photo</td>
+
 				</tr>
 			</thead>
 			<tbody>
@@ -26,8 +29,10 @@
 
 					<tr>
 						<td>${c.name}</td>
-						<td><img src="${c.imgUrl}"></td>
+						<td><img src="${c.imgUrl}" width="200px" height="200px"></td>
 						<td>${c.overallScore}</td>
+						<td>${c.characters.name}</td>
+						<td><img src="${c.characters.imgUrl}" width="200px" height="200px"></td>
 					</tr>
 
 				</c:forEach>
