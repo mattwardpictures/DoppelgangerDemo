@@ -27,7 +27,7 @@
 			
 			</div>
 			<div class = "col-md">
-				<canvas id = "radarChart" width="1280" height="700">
+				<canvas id = "doughnutChart" width="600" height="600">
 					<script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/compiled-4.5.15.min.js"></script>
 				</canvas>
 			</div>
@@ -80,37 +80,31 @@
 	</div>
 	
 	<script>
-  		//radar
-	  var ctxR = document.getElementById("radarChart").getContext('2d');
-  		var contempt = ${results.contempt};
-  		var surprise = ${results.surprise};
-  		var happiness = ${results.happiness};
-  		var neutral = ${results.neutral};
-  		var sadness = ${results.sadness};
-  		var disgust = ${results.disgust};
-  		var anger = ${results.anger};
-  		var fear = ${results.fear};
-	  var myRadarChart = new Chart(ctxR, {
-	    type: 'radar',
-	    data: {
-	      labels: ["Contempt", "Surprise", "Happiness", "Neutral", "Sadness", "Disgust", "Anger", "Fear"],
-	      datasets: [{
-	          label: "Emotional Map",
-	          data: [contempt, surprise, happiness, neutral, sadness, disgust, anger, fear],
-	          backgroundColor: [
-	            'rgba(105, 0, 132, .2)',
-	          ],
-	          borderColor: [
-	            'rgba(200, 99, 132, .7)',
-	          ],
-	          borderWidth: 2
-	        }]
-	    },
-	    options: {
-	      responsive: true
-	    }
-	  });
-	 
+		  //doughnut
+		  var ctxD = document.getElementById("doughnutChart").getContext('2d');
+				var contempt = ${results.contempt};
+		  		var surprise = ${results.surprise};
+		  		var happiness = ${results.happiness};
+		  		var neutral = ${results.neutral};
+		  		var sadness = ${results.sadness};
+		  		var disgust = ${results.disgust};
+		  		var anger = ${results.anger};
+		  		var fear = ${results.fear};
+		  var myLineChart = new Chart(ctxD, {
+		    type: 'doughnut',
+		    data: {
+		      labels: ["Contempt", "Surprise", "Happiness", "Neutral", "Sadness", "Disgust", "Anger", "Fear"],
+		      datasets: [{
+		        data: [contempt, surprise, happiness, neutral, sadness, disgust, anger, fear],
+		        backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360", "#8e1173", "#ff6100", "#00c7ff"],
+		        hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774", "#c13ea5", "#ff853a", "#6adcfc"]
+		      }]
+		    },
+		    options: {
+		      responsive: true
+		    }
+		  });
+
 	</script>
 	
 		
