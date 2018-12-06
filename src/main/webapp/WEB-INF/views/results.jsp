@@ -126,6 +126,8 @@
 		</tr>
 	</tbody>
 		</table>
+		
+		<a href="topten" class="btn btn-primary">Save Results</a> 
 	
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

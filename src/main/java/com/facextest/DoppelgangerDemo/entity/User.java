@@ -23,7 +23,7 @@ public class User {
 	private String imgUrl;
 	private double overallScore;
 	@Column(name = "id")
-	private double characterID;
+	private Integer characterID;
 
 	@ManyToOne
 	// corresponds to character id
@@ -34,7 +34,7 @@ public class User {
 
 	}
 
-	public User(Integer userID, String name, String imgUrl, double overallScore, double characterID,
+	public User(Integer userID, String name, String imgUrl, double overallScore, Integer characterID,
 			Characters characters) {
 		super();
 		this.userID = userID;
@@ -81,7 +81,7 @@ public class User {
 		return characterID;
 	}
 
-	public void setCharacterID(double characterID) {
+	public void setCharacterID(Integer characterID) {
 		this.characterID = characterID;
 	}
 
