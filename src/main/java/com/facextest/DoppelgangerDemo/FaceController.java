@@ -38,10 +38,10 @@ public class FaceController {
 	}
 
 	@RequestMapping("/getresults")
-	public ModelAndView compareFace(@RequestParam("username") String name, @RequestParam("file") String file) throws UnsupportedEncodingException {
+	public ModelAndView compareFace(@RequestParam("username") String name, @RequestParam("file") String imgUrl) throws UnsupportedEncodingException {
 		RestTemplate rT = new RestTemplate();
 
-		String imageWithFaces = "{\"url\":\"" + file + "\"}";
+		String imageWithFaces = "{\"url\":\"" + imgUrl + "\"}";
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Content-Type", "application/json");
 		headers.add("Ocp-Apim-Subscription-Key", subscriptionKey);
@@ -63,7 +63,7 @@ public class FaceController {
 		mv.addObject("ch", cR.findById(score2).orElse(null));
 		
 		mv.addObject("user", name);
-		mv.addObject("url", file);
+		mv.addObject("url", imgUrl);
 		
 		
 
