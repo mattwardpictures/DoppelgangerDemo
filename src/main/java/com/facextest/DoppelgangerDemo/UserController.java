@@ -17,13 +17,18 @@ public class UserController {
 	@Autowired
 	UserRepository uR;
 	
+	
+	@RequestMapping("results")
+	public ModelAndView showResultsPage() {
+		return new ModelAndView ("results");
+	}
 
 	@RequestMapping("/addUser")
 	public ModelAndView addUser(@RequestParam("username") String name, @RequestParam("file") String imgUrl, @RequestParam("score") double overallScore, @RequestParam("score2") Integer characterID,RedirectAttributes redirect) {
 		User u1 = new User(name,imgUrl,overallScore,characterID);
 		uR.save(u1);
 		redirect.addFlashAttribute("saved", "Saved succesfully");
-		return new ModelAndView("redirect:results");
+		return new ModelAndView("redirect:/results");
 
 	}	
 	
