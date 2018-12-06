@@ -30,7 +30,7 @@ tinypic_layout = 'narrow';
 tinypic_type = 'both';
 tinypic_links = 'url';
 tinypic_language = 'en';
-tinypic_search = 'true';
+tinypic_search = 'false';
 tinypic_autoload = true;
 </script>
 <script src="http://plugin.tinypic.com/j/plugin.js" type="text/javascript"></script>
