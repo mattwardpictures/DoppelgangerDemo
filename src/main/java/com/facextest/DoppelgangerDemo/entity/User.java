@@ -45,6 +45,25 @@ public class User {
 		this.characters = characters;
 	}
 
+	
+	
+	public User(String name, String imgUrl, double overallScore, Integer characterID) {
+		super();
+		this.name = name;
+		this.imgUrl = imgUrl;
+		this.overallScore = overallScore;
+		this.characterID = characterID;
+	}
+
+	public User(String name, String imgUrl, double overallScore, Integer characterID, Characters characters) {
+		super();
+		this.name = name;
+		this.imgUrl = imgUrl;
+		this.overallScore = overallScore;
+		this.characterID = characterID;
+		this.characters = characters;
+	}
+
 	public Integer getUserID() {
 		return userID;
 	}

@@ -35,7 +35,7 @@ public class FaceController {
 	}
 
 	@RequestMapping("/getresults")
-	public ModelAndView compareFace(@RequestParam("file") String file) throws UnsupportedEncodingException {
+	public ModelAndView compareFace(@RequestParam("name") String name,@RequestParam("file") String file) throws UnsupportedEncodingException {
 		RestTemplate rT = new RestTemplate();
 
 		String imageWithFaces = "{\"url\":\"" + file + "\"}";
@@ -84,9 +84,9 @@ public class FaceController {
 		return overallScore;
 	}
 
-	@RequestMapping("/lastten")
-	public ModelAndView getLastTenResults() {
-
-		return new ModelAndView();
-	}
+//	@RequestMapping("/lastten")
+//	public ModelAndView getLastTenResults() {
+//
+//		return new ModelAndView();
+//	}
 }

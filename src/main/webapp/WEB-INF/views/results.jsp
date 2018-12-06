@@ -127,7 +127,15 @@
 	</tbody>
 		</table>
 		
-		<a href="topten" class="btn btn-primary">Save Results</a> 
+		<form action="addUser">
+		<input type="hidden" name="name" value="${username}">
+		<input type="hidden" name="file" value="${imgurl}">
+		<input type="hidden" name="score" value="${score}">
+		<input type="hidden" name="score2" value="${ch.id}">
+		<input class="btn btn-primary" type="Submit" value="Save Results">
+		
+		
+		</form>
 	
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
