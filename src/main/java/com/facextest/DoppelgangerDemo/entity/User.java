@@ -22,6 +22,8 @@ public class User {
 	@Column(name = "urlpath")
 	private String imgUrl;
 	private double overallScore;
+	@Column(name = "id")
+	private double characterID;
 
 	@ManyToOne
 	// corresponds to character id
@@ -32,12 +34,14 @@ public class User {
 
 	}
 
-	public User(Integer userID, String name, String imgUrl, double overallScore, Characters characters) {
+	public User(Integer userID, String name, String imgUrl, double overallScore, double characterID,
+			Characters characters) {
 		super();
 		this.userID = userID;
 		this.name = name;
 		this.imgUrl = imgUrl;
 		this.overallScore = overallScore;
+		this.characterID = characterID;
 		this.characters = characters;
 	}
 
@@ -73,6 +77,14 @@ public class User {
 		this.overallScore = overallScore;
 	}
 
+	public double getCharacterID() {
+		return characterID;
+	}
+
+	public void setCharacterID(double characterID) {
+		this.characterID = characterID;
+	}
+
 	public Characters getCharacters() {
 		return characters;
 	}
@@ -84,7 +96,7 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [userID=" + userID + ", name=" + name + ", imgUrl=" + imgUrl + ", overallScore=" + overallScore
-				+ ", characters=" + characters + "]";
+				+ ", characterID=" + characterID + ", characters=" + characters + "]";
 	}
 
 }
