@@ -25,4 +25,10 @@ public class UserController {
 
 	}	
 	
+	@RequestMapping("topten")
+	public ModelAndView showUsers() {
+		ModelAndView mv = new ModelAndView("topten","model",uR.findAll());
+		return mv;
+	}
+	
 }
