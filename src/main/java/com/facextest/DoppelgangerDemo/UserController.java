@@ -21,7 +21,8 @@ public class UserController {
 	public ModelAndView addUser(@RequestParam("username") String name, @RequestParam("file") String imgUrl, @RequestParam("score") double overallScore, @RequestParam("score2") Integer characterID) {
 		User u1 = new User(name,imgUrl,overallScore,characterID);
 		uR.save(u1);
-		return new ModelAndView();
+		return new ModelAndView("topten");
 
 	}	
+	
 }
