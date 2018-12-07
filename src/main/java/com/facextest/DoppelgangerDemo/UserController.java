@@ -28,11 +28,16 @@ public class UserController {
 		User u1 = new User(name, imgUrl, overallScore, characterID);
 		uR.save(u1);
 		redirect.addFlashAttribute("saved", "Saved succesfully");
-		return new ModelAndView("redirect:/results");
+		return new ModelAndView("redirect:/topten");
 
 	}
+	
+//	@RequestMapping("topten")
+//	public ModelAndView topten() {
+//		return new ModelAndView("topten");
+//	}
 
-	@RequestMapping("top10")
+	@RequestMapping("topten")
 	public ModelAndView showUsers() {
 		ModelAndView mv = new ModelAndView("topten", "model", uR.findAll());
 		return mv;

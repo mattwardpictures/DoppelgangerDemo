@@ -131,7 +131,9 @@
 			${saved}
 			
 			<br>
-			<a href = "top10">See the last ten results</a>
+			
+			<a href = "topten" class ="btn btn-primary" >See the last ten results</a>
+			
 			
 		</div>
 		
