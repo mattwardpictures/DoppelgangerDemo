@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.facextest.DoppelgangerDemo.Repository.CharacterRepository;
 import com.facextest.DoppelgangerDemo.Repository.UserRepository;
 import com.facextest.DoppelgangerDemo.entity.User;
 
@@ -15,6 +16,9 @@ public class UserController {
 
 	@Autowired
 	UserRepository uR;
+	
+	@Autowired
+	CharacterRepository cR;
 
 	@RequestMapping("results")
 	public ModelAndView showResultsPage() {
@@ -43,4 +47,12 @@ public class UserController {
 		return mv;
 	}
 
+	
+	@RequestMapping("legends")
+		public ModelAndView showCharacters() {
+			
+			
+			return new ModelAndView("legend", "disney", cR.findAll());
+		}
+	
 }

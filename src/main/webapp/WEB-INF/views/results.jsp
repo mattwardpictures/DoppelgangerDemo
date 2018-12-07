@@ -40,7 +40,7 @@
 							</div>
 						</li>
 						
-						<li class="nav-item"><a class="nav-link" href="#">Legend</a></li>
+						<li class="nav-item"><a class="nav-link" href="legends">Legend</a></li>
 						<li class="nav-item"><a class="nav-link" href="topten">Meet The Others</a></li>
 					</ul>
 				</div>

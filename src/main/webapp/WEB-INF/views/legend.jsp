@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Disney Heroes & Villains - Meet The Other Faces</title>
+		<title>Disney Heroes & Villains - Meet The Characters</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/litera/bootstrap.min.css">
 			<style type="text/css">
@@ -41,8 +41,8 @@
 							</div>
 						</li>
 						
-						<li class="nav-item"><a class="nav-link" href="legend">Legend</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Meet The Others</a></li>
+						<li class="nav-item"><a class="nav-link" href="legends">Legend</a></li>
+						<li class="nav-item"><a class="nav-link" href="topten">Meet The Others</a></li>
 					</ul>
 				</div>
 			</div>
@@ -54,24 +54,24 @@
 	
 				<thead>
 					<tr class="table-active">
+						<th scope="col">Character Score</th>
 						<th scope="col">Name</th>
 						<th scope="col">Photo</th>
-						<th scope="col">Score</th>
-						<th scope="col">Character Name</th>
-						<th scope="col">Photo</th>
+						<th scope="col">Movie</th>
+						
 	
 					</tr>
 				</thead>
 				
 				<tbody>
-					<c:forEach var="c" items="${model}">
+					<c:forEach var="c" items="${disney}">
 	
 						<tr>
+							<td>${c.characterID}</td>
 							<td>${c.name}</td>
 							<td><img src="${c.imgUrl}" width="200px" height="200px"></td>
-							<td>${c.overallScore}</td>
-							<td>${c.characters.name}</td>
-							<td><img src="${c.characters.imgUrl}" width="200px" height="200px"></td>
+							<td>${c.movie}</td>
+							
 						</tr>
 	
 					</c:forEach>
