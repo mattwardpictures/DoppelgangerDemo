@@ -33,6 +33,11 @@ public class FaceController {
 	public ModelAndView index() {
 		return new ModelAndView("index");
 	}
+	
+	@RequestMapping("/aboutus")
+	public ModelAndView aboutUs() {
+		return new ModelAndView("aboutus");
+	}
 
 	@RequestMapping("/getresults")
 	public ModelAndView compareFace(@RequestParam("username") String name, @RequestParam("file") String imgUrl)

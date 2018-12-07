@@ -29,7 +29,7 @@
 				<a class="navbar-brand" href="/">H&V</a>
 				<div>
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="aboutus">About</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Legend</a></li>
 						<li class="nav-item"><a class="nav-link" href="topten">Meet The Others</a></li>
 					</ul>
