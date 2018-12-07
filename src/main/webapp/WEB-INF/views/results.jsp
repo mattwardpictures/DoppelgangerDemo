@@ -31,7 +31,7 @@
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Legend</a></li>
-						<li class="nav-item"><a class="nav-link" href="top10">Meet The Others</a></li>
+						<li class="nav-item"><a class="nav-link" href="topten">Meet The Others</a></li>
 					</ul>
 				</div>
 			</div>
