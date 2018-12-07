@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Disney Heroes & Villains</title>
+<title>Disney Heroes & Villains - About Us</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet"
@@ -41,30 +41,40 @@ h2, h3 {
 </head>
 <body>
 
-	<nav
-		class="navbar navbar-expand-lg navbar-light site-header bg-light sticky-top py-1">
-		<div class="container">
-			<a class="navbar-brand" href="#">H&V</a>
-			<div>
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a class="nav-link" href="aboutus">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Legend</a></li>
-					<li class="nav-item"><a class="nav-link" href="topten">Meet
-							The Others</a></li>
-				</ul>
+	<nav class="navbar navbar-expand-lg navbar-light site-header bg-light sticky-top py-1">
+			<div class="container">
+				<a class="navbar-brand" href="/">H&V</a>
+				<div>
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item dropdown show">
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+							About
+							<span class="caret"></span>
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="aboutus">About The Team</a>
+								<a class="dropdown-item" href="aboutproject">About The Project</a>
+							</div>
+						</li>
+						
+						<li class="nav-item"><a class="nav-link" href="#">Legend</a></li>
+						<li class="nav-item"><a class="nav-link" href="topten">Meet The Others</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
 	</nav>
 
 	<div class="container">
 			
-			<div class="page-header">
+		<div class="page-header">
 			
 				<h2>Meet the Developers</h2><br>
 				<p class="lead">Heroes and Villains was developed by a team of four Grand Circus Java students in the October 2018 cohort. The idea stemmed from our desire to learn more about facial recognition APIs and we thought this would be a fun way to explore this technology while implementing it into the fundamentals learned at Grand Circus.
-</p>	
-<h6>Christie Desnoyer</h6>
-<h6>Angela Castaneda Lopez</h6>
-<h6>Charlotte Lusby</h6>
-<h6>Matt Ward</h6>
+				</p>	
+				<h6>Christie Desnoyer</h6>
+				<h6>Angela Castaneda Lopez</h6>
+				<h6>Charlotte Lusby</h6>
+				<h6>Matt Ward</h6>
 		</div>
+		
+	</div>

@@ -33,10 +33,15 @@ public class FaceController {
 	public ModelAndView index() {
 		return new ModelAndView("index");
 	}
-	
+
 	@RequestMapping("/aboutus")
 	public ModelAndView aboutUs() {
 		return new ModelAndView("aboutus");
+	}
+
+	@RequestMapping("/aboutproject")
+	public ModelAndView aboutProject() {
+		return new ModelAndView("aboutproject");
 	}
 
 	@RequestMapping("/getresults")

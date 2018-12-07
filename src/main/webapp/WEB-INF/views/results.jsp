@@ -29,7 +29,17 @@
 				<a class="navbar-brand" href="/">H&V</a>
 				<div>
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item"><a class="nav-link" href="aboutus">About</a></li>
+						<li class="nav-item dropdown show">
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+							About
+							<span class="caret"></span>
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="aboutus">About The Team</a>
+								<a class="dropdown-item" href="aboutproject">About The Project</a>
+							</div>
+						</li>
+						
 						<li class="nav-item"><a class="nav-link" href="#">Legend</a></li>
 						<li class="nav-item"><a class="nav-link" href="topten">Meet The Others</a></li>
 					</ul>
