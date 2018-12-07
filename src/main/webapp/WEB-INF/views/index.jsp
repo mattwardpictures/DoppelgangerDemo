@@ -9,6 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/litera/bootstrap.min.css">
 		<style type="text/css">
+			
 			.page-header {
 				padding-top: 150px;
 				padding-bottom: 150px;
@@ -24,6 +25,10 @@
 				text-align: center;
 			}
 			
+			#call-to-action {
+				padding-bottom: 20px;
+			}
+			
 			#redletter {
 				color: #fc0000;
 			}
@@ -31,6 +36,7 @@
 				max-height: 600px;
 				
 			}
+			
 		</style>
 	</head>
 	<body>
@@ -40,8 +46,9 @@
 				<a class="navbar-brand" href="#">H&V</a>
 				<div>
 					<ul class="navbar-nav mr-auto">
+						<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Legend</a></li>
-						<li class="nav-item"><a class="nav-link" href="topten">Meet The Others</a></li>
+						<li class="nav-item"><a class="nav-link" href="top10">Meet The Others</a></li>
 					</ul>
 				</div>
 			</div>
@@ -79,8 +86,11 @@
 				
 				<div class="col-md">
 				
-					<h2>Get your face</h2>
-					<h2 id="redletter">read.</h2>
+					<div id="call-to-action">
+						<h2>Get your face</h2>
+						<h2 id="redletter">read.</h2>
+					</div>
+					
 					<ul>
 						<li>Type your name in the form below.</li>
 						<li>Upload your picture into the TinyPic app.</li>
