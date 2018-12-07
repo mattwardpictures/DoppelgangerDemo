@@ -21,7 +21,7 @@
 				letter-spacing: -2px;
 			}
 			
-			h2 {
+			h2, h3 {
 				text-align: center;
 			}
 			
@@ -58,8 +58,10 @@
 			
 			<div class="page-header">
 			
+				<p class="lead">Ever wanted to know what Disney character you're most like?</p>
 				<h1>Welcome to Disney</h1>
 				<h1>Heroes And Villains</h1>
+				<h3>Emotional Analysis Generator</h3>
 			
 				<!-- <div id="carouselfaces" class="carousel slide" data-ride="carousel">
 		  			<div class="carousel-inner">
@@ -87,6 +89,7 @@
 				<div class="col-md">
 				
 					<div id="call-to-action">
+						
 						<h2>Get your face</h2>
 						<h2 id="redletter">read.</h2>
 					</div>

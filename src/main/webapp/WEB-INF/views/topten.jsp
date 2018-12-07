@@ -43,15 +43,16 @@
 			<table class="table">
 	
 				<thead>
-					<tr>
-						<td>Name</td>
-						<td>Photo</td>
-						<td>Score</td>
-						<td>Character Name</td>
-						<td>Photo</td>
+					<tr class="table-active">
+						<th scope="col">Name</th>
+						<th scope="col">Photo</th>
+						<th scope="col">Score</th>
+						<th scope="col">Character Name</th>
+						<th scope="col">Photo</th>
 	
 					</tr>
 				</thead>
+				
 				<tbody>
 					<c:forEach var="c" items="${model}">
 	
