@@ -112,9 +112,9 @@
 					</ul>
 					
 				    <form class="form-group" action = "getresults">
-				        <input class="form-control" type = "text" name = "username" placeholder = "Enter your name">
+				        <input class="form-control" type = "text" name = "username" placeholder = "Enter your name" required >
 				        <br>
-				        <input class="form-control" type = "text" name = "file" placeholder = "Enter your picture's URL">
+				        <input class="form-control" type = "text" name = "file" placeholder = "Enter your picture's URL" required>
 				        <br>
 				        <input id="button" class="btn btn-secondary" type = "submit" value = "Upload File">
 				    </form>
