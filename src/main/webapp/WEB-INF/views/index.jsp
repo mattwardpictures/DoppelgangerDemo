@@ -25,6 +25,7 @@
 			
 			.page-header h3 {
 				font-size: 2em;
+				line-height: 2;
 			}
 			
 			.header-graphic {
@@ -38,6 +39,7 @@
 			h1 {
 				font-size: 5em;
 				letter-spacing: -2px;
+				line-height: 1;
 			}
 			
 			h2, h3 {
