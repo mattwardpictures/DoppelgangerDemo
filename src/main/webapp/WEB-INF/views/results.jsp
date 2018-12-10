@@ -41,7 +41,7 @@
 						</li>
 						
 						<li class="nav-item"><a class="nav-link" href="legends">Legend</a></li>
-						<li class="nav-item"><a class="nav-link" href="topten">Meet The Others</a></li>
+						<li class="nav-item"><a class="nav-link" href="allusers">Meet The Others</a></li>
 					</ul>
 				</div>
 			</div>
@@ -142,7 +142,7 @@
 			
 			<br>
 			
-			<a href = "topten" class ="btn btn-primary" >See the last ten results</a>
+			<a href = "allusers" class ="btn btn-primary" >See all results</a>
 			
 			
 		</div>

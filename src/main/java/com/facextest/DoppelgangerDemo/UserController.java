@@ -1,5 +1,8 @@
 package com.facextest.DoppelgangerDemo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,8 +45,19 @@ public class UserController {
 //	}
 
 	@RequestMapping("topten")
+	public ModelAndView showTenUsers() {
+		List<User> list = uR.findAll();
+		List<User> topTenList = new ArrayList<>();
+		for (int i = list.size() - 1; i > list.size() - 11; --i) {
+			topTenList.add(list.get(i));
+		}
+		ModelAndView mv = new ModelAndView("topten", "ten", topTenList);
+		return mv;
+	}
+	
+	@RequestMapping("allusers")
 	public ModelAndView showUsers() {
-		ModelAndView mv = new ModelAndView("topten", "model", uR.findAll());
+		ModelAndView mv = new ModelAndView("allusers", "model", uR.findAll());
 		return mv;
 	}
 

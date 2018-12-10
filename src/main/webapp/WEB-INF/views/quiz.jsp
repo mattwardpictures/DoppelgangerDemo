@@ -90,7 +90,7 @@
 						</li>
 						
 						<li class="nav-item"><a class="nav-link" href="legends">Legend</a></li>
-						<li class="nav-item"><a class="nav-link" href="topten">Meet The Others</a></li>
+						<li class="nav-item"><a class="nav-link" href="allusers">Meet The Others</a></li>
 					</ul>
 				</div>
 			</div>
