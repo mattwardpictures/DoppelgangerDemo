@@ -25,6 +25,7 @@ public class Characters {
 	@Column(name = "picture")
 	private String imgUrl;
 	private String movie;
+	private String personality;
 
 	@OneToMany(mappedBy = "characters", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<User> users = new ArrayList<>();
@@ -33,20 +34,23 @@ public class Characters {
 
 	}
 
-	public Characters(Integer characterID, String name, String imgUrl, String movie, List<User> users) {
+	public Characters(Integer characterID, String name, String imgUrl, String movie, String personality,
+			List<User> users) {
 		super();
 		this.characterID = characterID;
 		this.name = name;
 		this.imgUrl = imgUrl;
 		this.movie = movie;
+		this.personality = personality;
 		this.users = users;
 	}
 
-	public Characters(Integer characterID, String imgUrl, String movie, List<User> users) {
+	public Characters(Integer characterID, String imgUrl, String movie, String personality, List<User> users) {
 		super();
 		this.characterID = characterID;
 		this.imgUrl = imgUrl;
 		this.movie = movie;
+		this.personality = personality;
 		this.users = users;
 	}
 
@@ -57,6 +61,7 @@ public class Characters {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public Integer getCharacterID() {
 		return characterID;
 	}
@@ -81,6 +86,14 @@ public class Characters {
 		this.movie = movie;
 	}
 
+	public String getPersonality() {
+		return personality;
+	}
+
+	public void setPersonality(String personality) {
+		this.personality = personality;
+	}
+
 	public List<User> getUsers() {
 		return users;
 	}
@@ -91,8 +104,8 @@ public class Characters {
 
 	@Override
 	public String toString() {
-		return "Characters [characterID=" + characterID + ", imgUrl=" + imgUrl + ", movie=" + movie + ", users=" + users
-				+ "]";
+		return "Characters [characterID=" + characterID + ", name=" + name + ", imgUrl=" + imgUrl + ", movie=" + movie
+				+ ", personality=" + personality + ", users=" + users + "]";
 	}
 
 }
