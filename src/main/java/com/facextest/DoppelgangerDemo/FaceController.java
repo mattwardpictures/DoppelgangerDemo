@@ -1,6 +1,8 @@
 package com.facextest.DoppelgangerDemo;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.facextest.DoppelgangerDemo.Repository.CharacterRepository;
+import com.facextest.DoppelgangerDemo.Repository.UserRepository;
 import com.facextest.DoppelgangerDemo.entity.FaceWrapper;
 import com.facextest.DoppelgangerDemo.entity.User;
 
@@ -21,6 +24,9 @@ public class FaceController {
 
 	@Autowired
 	CharacterRepository cR;
+	
+	@Autowired
+	UserRepository uR;
 
 	@Value("${subscription.key}")
 	String subscriptionKey;
@@ -33,7 +39,13 @@ public class FaceController {
 
 	@RequestMapping("/")
 	public ModelAndView index() {
-		return new ModelAndView("index");
+		List<User> list = uR.findAll();
+		List<User> topTenList = new ArrayList<>();
+		for (int i = list.size() - 1; i > list.size() - 11; --i) {
+			topTenList.add(list.get(i));
+		}
+		
+		return new ModelAndView("index", "ten",topTenList);
 	}
 
 	@RequestMapping("/aboutus")
