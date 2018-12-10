@@ -134,12 +134,106 @@
 					
 					<form class="form-group" action="quizresult2">
 						<h3>How do you feel before crossing a busy street?</h3>
+						<div class="row">
+						<label>
+						<input type="radio" name="sadness">						
+						<img src=https://www.pinterest.com/pin/247135098282712098>
+						</label>
+						<label>
+						<input type="radio" name="happiness" >
+						<img src= https://2.bp.blogspot.com/-x6nbnvOIKD8/WmuhiXJHSHI/AAAAAAAAHZI/80UaJ9qngPw2fB4lYx6CBfvyA9hq2h1OwCLcBGAs/s320/Buzz_Lightyear_running.jpg/>
+						</label>
+						<label>
+						<input type="radio" name="surprise" >
+						<img src= https://vignette.wikia.nocookie.net/disney/images/1/14/Surprised_Alice.png/revision/latest/scale-to-width-down/632?cb=20131125031332/>
+						</label>
+						</div>
+						
+						<div class="row">
+						<label>
+						<input type="radio" name="neutral">
+						<img src= https://lumiere-a.akamaihd.net/v1/images/tmb-sq_character-baymax_launch_f406f659.jpeg/>
+						</label>
+						<label>
+						<input type="radio" name="anger">
+						<img src=https://c8.alamy.com/comp/MABP97/donald-duck-illustration-cartoon-angry-MABP97.jpg>
+						</label>
+						</div>
+						<input id="button" class="btn btn-secondary" type = "submit" value = "Enter">
+					</form>
+					
+				</div>
+				
+				<div class="col-md">
+				
+				
+				</div>
+			
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md">
+					
+					<form class="form-group" action="quizresult3">
+						<h3>You're cornered by your enemies. Think fast! Weapon of choice?</h3>
 						<ol>
-							<li><input type="radio" name="happiness" >I’m stoked, bring on the cake!</li>
-							<li><input type="radio" name="surprise" >Uh-oh, panic poops.</li>
-							<li><input type="radio" name="neutral" >I stopped counting after my 1st child.</li>
-							<li><input type="radio" name="anger" >Who’s paying?</li>
-							<li><input type="radio" name="sadness" >Rex from Toy Story</li>
+							<li><input type="radio" name="surprise" >Cast-iron frying pan.</li>
+							<li><input type="radio" name="happiness" >I can control climate, and am therefore, a god.</li>
+							<li><input type="radio" name="neutral" >Not worth the effort, I’m gardening.</li>
+							<li><input type="radio" name="anger" >Withering glare.</li>
+							<li><input type="radio" name="sadness" >Talk with me long enough, and I’ll drag you down with me.</li>
+						</ol>
+						<input id="button" class="btn btn-secondary" type = "submit" value = "Enter">
+					</form>
+					
+				</div>
+				
+				<div class="col-md">
+				
+				</div>
+			
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md">
+					
+					<form class="form-group" action="quizresult4">
+						<h3>It’s 6AM, and the Sun has fired her first peal of orange across the horizon. The new day is on its way inexorably through the blinds, and into your crusty eyeballs—this is your cue to:
+</h3>
+						<ol>
+							<li><input type="radio" name="happiness" >Seize the day; I’m thinking of doing as many as six impossible things before breakfast!</li>
+							<li><input type="radio" name="surprise" >Oh crap, I’ve got all that stuff I’ve got to do! (Charges like bull through Pfaltzgraff’s)</li>
+							<li><input type="radio" name="neutral" >Gee, I’ve only just noticed how much this blanket feels like heaven… (Hits the snooze)
+</li>
+							<li><input type="radio" name="anger" >Whoever or whatever is trying to wake me up is about meet their end via deadblow mallet.</li>
+							<li><input type="radio" name="sadness" >I must invite you… to just leave me alone. (Draws curtains)
+</li>
+						</ol>
+						<input id="button" class="btn btn-secondary" type = "submit" value = "Enter">
+					</form>
+					
+				</div>
+				
+				<div class="col-md">
+				
+				</div>
+			
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md">
+					
+					<form class="form-group" action="quizresult5">
+						<h3>Which quote do you identify with the most?</h3>
+						<ol>
+							<li><input type="radio" name="neutral" >"Your identity is your most valuable possession. Protect it."!</li>
+							<li><input type="radio" name="surprise" >“It’s true love!”</li>
+							<li><input type="radio" name="anger" >“I never go back on my word!”</li>
+							<li><input type="radio" name="sadness" >“Forever is a long time, and time has a way of changing things.”</li>
+							<li><input type="radio" name="happiness" >"Venture outside your comfort zone. The rewards are worth it."</li>
 						</ol>
 						<input id="button" class="btn btn-secondary" type = "submit" value = "Enter">
 					</form>

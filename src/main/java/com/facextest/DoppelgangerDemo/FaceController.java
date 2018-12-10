@@ -50,7 +50,7 @@ public class FaceController {
 	public ModelAndView compareFace(@RequestParam("username") String name, @RequestParam("file") String imgUrl)
 			throws UnsupportedEncodingException {
 		response = getFaceMatch(imgUrl);
-
+		
 		ModelAndView mv = new ModelAndView("results");
 
 		double score = getScore(response);
@@ -66,7 +66,12 @@ public class FaceController {
 		return mv;
 
 	}
-
+	
+	@RequestMapping("/quiz")
+	public ModelAndView quiz() {
+	return new ModelAndView("quiz");
+	
+	}
 	private FaceWrapper[] getFaceMatch(String imgUrl) {
 		RestTemplate rT = new RestTemplate();
 
