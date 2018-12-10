@@ -62,8 +62,8 @@ public class FaceController {
 	public ModelAndView compareFace(@RequestParam("username") String name, @RequestParam("file") String imgUrl)
 			throws UnsupportedEncodingException {
 		response = getFaceMatch(imgUrl);
-		
-		ModelAndView mv = new ModelAndView("results");
+
+		ModelAndView mv = new ModelAndView("quiz");
 
 		double score = getScore(response);
 		int score2 = (int) Math.round(score);
@@ -78,12 +78,194 @@ public class FaceController {
 		return mv;
 
 	}
-	
+
 	@RequestMapping("/quiz")
 	public ModelAndView quiz() {
-	return new ModelAndView("quiz");
-	
+		return new ModelAndView("quiz");
 	}
+
+	@RequestMapping("/quizresult")
+	public ModelAndView questionAnswers(@RequestParam("question1") String question1,
+			@RequestParam("question2") String question2, @RequestParam("question3") String question3,
+			@RequestParam("question4") String question4, @RequestParam("question5") String question5) {
+
+		double angerChange = 0.0;
+		double sadnessChange = 0.0;
+		double neutralChange = 0.0;
+		double surpriseChange = 0.0;
+		double happinessChange = 0.0;
+
+		String[] quizQ1 = question1.split(",");
+		String q1Value = quizQ1[0];
+		Double q1Score = Double.parseDouble(quizQ1[1]);
+
+//		Map<String, Double> quizMap = new HashMap<>();
+//		quizMap.put(key, value)
+
+		// Question 1 conditions
+		if (question1.equalsIgnoreCase("happiness")) {
+			angerChange = -0.03;
+			sadnessChange = -0.05;
+			neutralChange = -0.1;
+			surpriseChange = -0.1;
+			happinessChange = 0.1;
+		} else if (question1.equalsIgnoreCase("surprise")) {
+			angerChange = -0.03;
+			sadnessChange = -0.05;
+			neutralChange = -0.1;
+			surpriseChange = 0.1;
+			happinessChange = -0.1;
+		} else if (question1.equalsIgnoreCase("neutral")) {
+			angerChange = -0.03;
+			sadnessChange = -0.05;
+			neutralChange = 0.1;
+			surpriseChange = -0.1;
+			happinessChange = -0.1;
+		} else if (question1.equalsIgnoreCase("sadness")) {
+			angerChange = -0.03;
+			sadnessChange = 0.05;
+			neutralChange = -0.1;
+			surpriseChange = -0.1;
+			happinessChange = -0.1;
+		} else if (question1.equalsIgnoreCase("anger")) {
+			angerChange = 0.03;
+			sadnessChange = -0.05;
+			neutralChange = -0.1;
+			surpriseChange = -0.1;
+			happinessChange = -0.1;
+		}
+		// Question 2 conditions
+		if (question2.equalsIgnoreCase("happiness")) {
+			angerChange -= 0.03;
+			sadnessChange -= 0.05;
+			neutralChange -= 0.1;
+			surpriseChange -= 0.1;
+			happinessChange += 0.1;
+		} else if (question2.equalsIgnoreCase("surprise")) {
+			angerChange -= 0.03;
+			sadnessChange -= 0.05;
+			neutralChange -= 0.1;
+			surpriseChange += 0.1;
+			happinessChange -= 0.1;
+		} else if (question2.equalsIgnoreCase("neutral")) {
+			angerChange -= 0.03;
+			sadnessChange -= 0.05;
+			neutralChange += 0.1;
+			surpriseChange -= 0.1;
+			happinessChange -= 0.1;
+		} else if (question2.equalsIgnoreCase("sadness")) {
+			angerChange -= 0.03;
+			sadnessChange += 0.05;
+			neutralChange -= 0.1;
+			surpriseChange -= 0.1;
+			happinessChange -= 0.1;
+		} else if (question2.equalsIgnoreCase("anger")) {
+			angerChange += 0.03;
+			sadnessChange -= 0.05;
+			neutralChange -= 0.1;
+			surpriseChange -= 0.1;
+			happinessChange -= 0.1;
+		}
+		// Question 3 conditions
+		else if (question3.equalsIgnoreCase("happiness")) {
+			angerChange -= 0.03;
+			sadnessChange -= 0.05;
+			neutralChange -= 0.1;
+			surpriseChange -= 0.1;
+			happinessChange += 0.1;
+		} else if (question3.equalsIgnoreCase("surprise")) {
+			angerChange -= 0.03;
+			sadnessChange -= 0.05;
+			neutralChange -= 0.1;
+			surpriseChange += 0.1;
+			happinessChange -= 0.1;
+		} else if (question3.equalsIgnoreCase("neutral")) {
+			angerChange -= 0.03;
+			sadnessChange -= 0.05;
+			neutralChange += 0.1;
+			surpriseChange -= 0.1;
+			happinessChange -= 0.1;
+		} else if (question3.equalsIgnoreCase("sadness")) {
+			angerChange -= 0.03;
+			sadnessChange += 0.05;
+			neutralChange -= 0.1;
+			surpriseChange -= 0.1;
+			happinessChange -= 0.1;
+		} else if (question3.equalsIgnoreCase("anger")) {
+			angerChange += 0.03;
+			sadnessChange -= 0.05;
+			neutralChange -= 0.1;
+			surpriseChange -= 0.1;
+			happinessChange -= 0.1;
+		}
+		// Question 4 conditions
+		else if (question4.equalsIgnoreCase("happiness")) {
+			angerChange -= 0.03;
+			sadnessChange -= 0.05;
+			neutralChange -= 0.1;
+			surpriseChange -= 0.1;
+			happinessChange += 0.1;
+		} else if (question4.equalsIgnoreCase("surprise")) {
+			angerChange -= 0.03;
+			sadnessChange -= 0.05;
+			neutralChange -= 0.1;
+			surpriseChange += 0.1;
+			happinessChange -= 0.1;
+		} else if (question4.equalsIgnoreCase("neutral")) {
+			angerChange -= 0.03;
+			sadnessChange -= 0.05;
+			neutralChange += 0.1;
+			surpriseChange -= 0.1;
+			happinessChange -= 0.1;
+		} else if (question4.equalsIgnoreCase("sadness")) {
+			angerChange -= 0.03;
+			sadnessChange += 0.05;
+			neutralChange -= 0.1;
+			surpriseChange -= 0.1;
+			happinessChange -= 0.1;
+		} else if (question4.equalsIgnoreCase("anger")) {
+			angerChange += 0.03;
+			sadnessChange -= 0.05;
+			neutralChange -= 0.1;
+			surpriseChange -= 0.1;
+			happinessChange -= 0.1;
+		}
+		// Question 5 conditions
+		else if (question5.equalsIgnoreCase("happiness")) {
+			angerChange -= 0.03;
+			sadnessChange -= 0.05;
+			neutralChange -= 0.1;
+			surpriseChange -= 0.1;
+			happinessChange += 0.1;
+		} else if (question5.equalsIgnoreCase("surprise")) {
+			angerChange -= 0.03;
+			sadnessChange -= 0.05;
+			neutralChange -= 0.1;
+			surpriseChange += 0.1;
+			happinessChange -= 0.1;
+		} else if (question5.equalsIgnoreCase("neutral")) {
+			angerChange -= 0.03;
+			sadnessChange -= 0.05;
+			neutralChange += 0.1;
+			surpriseChange -= 0.1;
+			happinessChange -= 0.1;
+		} else if (question5.equalsIgnoreCase("sadness")) {
+			angerChange -= 0.03;
+			sadnessChange += 0.05;
+			neutralChange -= 0.1;
+			surpriseChange -= 0.1;
+			happinessChange -= 0.1;
+		} else if (question5.equalsIgnoreCase("anger")) {
+			angerChange += 0.03;
+			sadnessChange -= 0.05;
+			neutralChange -= 0.1;
+			surpriseChange -= 0.1;
+			happinessChange -= 0.1;
+		}
+
+		return null;
+	}
+
 	private FaceWrapper[] getFaceMatch(String imgUrl) {
 		RestTemplate rT = new RestTemplate();
 
