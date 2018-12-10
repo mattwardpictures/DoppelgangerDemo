@@ -42,7 +42,7 @@
 						</li>
 						
 						<li class="nav-item"><a class="nav-link" href="legend">Legend</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Meet The Others</a></li>
+						<li class="nav-item"><a class="nav-link" href="allusers">Meet The Others</a></li>
 					</ul>
 				</div>
 			</div>
