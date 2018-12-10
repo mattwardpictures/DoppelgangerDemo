@@ -29,6 +29,8 @@ public class FaceController {
 
 	User user;
 
+	FaceWrapper[] response;
+
 	@RequestMapping("/")
 	public ModelAndView index() {
 		return new ModelAndView("index");
@@ -47,19 +49,7 @@ public class FaceController {
 	@RequestMapping("/getresults")
 	public ModelAndView compareFace(@RequestParam("username") String name, @RequestParam("file") String imgUrl)
 			throws UnsupportedEncodingException {
-		RestTemplate rT = new RestTemplate();
-
-		String imageWithFaces = "{\"url\":\"" + imgUrl + "\"}";
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("Content-Type", "application/json");
-		headers.add("Ocp-Apim-Subscription-Key", subscriptionKey);
-
-		HttpEntity<String> entity = new HttpEntity<String>(imageWithFaces, headers);
-
-		FaceWrapper[] response = rT.postForObject(uriBase, entity, FaceWrapper[].class);
-		for (int i = 0; i < response.length; ++i) {
-			System.out.println(response[i]);
-		}
+		response = getFaceMatch(imgUrl);
 
 		ModelAndView mv = new ModelAndView("results");
 
@@ -75,6 +65,23 @@ public class FaceController {
 
 		return mv;
 
+	}
+
+	private FaceWrapper[] getFaceMatch(String imgUrl) {
+		RestTemplate rT = new RestTemplate();
+
+		String imageWithFaces = "{\"url\":\"" + imgUrl + "\"}";
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("Content-Type", "application/json");
+		headers.add("Ocp-Apim-Subscription-Key", subscriptionKey);
+
+		HttpEntity<String> entity = new HttpEntity<String>(imageWithFaces, headers);
+
+		FaceWrapper[] response = rT.postForObject(uriBase, entity, FaceWrapper[].class);
+		for (int i = 0; i < response.length; ++i) {
+			System.out.println(response[i]);
+		}
+		return response;
 	}
 
 	private static Double getScore(FaceWrapper[] response) {
