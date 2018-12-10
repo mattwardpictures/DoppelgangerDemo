@@ -39,21 +39,6 @@ public class UserController {
 
 	}
 	
-//	@RequestMapping("topten")
-//	public ModelAndView topten() {
-//		return new ModelAndView("topten");
-//	}
-
-	@RequestMapping("topten")
-	public ModelAndView showTenUsers() {
-		List<User> list = uR.findAll();
-		List<User> topTenList = new ArrayList<>();
-		for (int i = list.size() - 1; i > list.size() - 11; --i) {
-			topTenList.add(list.get(i));
-		}
-		ModelAndView mv = new ModelAndView("topten", "ten", topTenList);
-		return mv;
-	}
 	
 	@RequestMapping("allusers")
 	public ModelAndView showUsers() {
