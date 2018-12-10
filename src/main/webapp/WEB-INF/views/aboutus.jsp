@@ -44,7 +44,7 @@ h2, h3 {
 	
 		<nav class="navbar navbar-expand-lg navbar-light site-header bg-light sticky-top py-1">
 				<div class="container">
-				<a class="navbar-brand" href="#">H&V</a>
+				<a class="navbar-brand" href="/">H&V</a>
 				<div>
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item dropdown show">
