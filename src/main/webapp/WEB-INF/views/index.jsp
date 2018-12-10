@@ -7,22 +7,45 @@
 		<meta charset="UTF-8">
 		<title>Disney Heroes & Villains</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/litera/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/cyborg/bootstrap.min.css">
 		<style type="text/css">
 			
+			body {
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			}
+			
+			p.lead {
+				letter-spacing: 1px;
+			}
+			
 			.page-header {
-				padding-top: 150px;
-				padding-bottom: 150px;
+				padding-top: 50px;
 				text-align: center;
 			}
 			
+			.page-header h3 {
+				font-size: 2em;
+			}
+			
+			.header-graphic {
+				min-height: 500px;
+				background-image: url("https://images3.alphacoders.com/637/637817.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			
 			h1 {
-				font-size: 4em;
+				font-size: 5em;
 				letter-spacing: -2px;
 			}
 			
 			h2, h3 {
 				text-align: center;
+			}
+			
+			#row1 {
+				padding-top: 30px;
 			}
 			
 			#call-to-action {
@@ -37,11 +60,17 @@
 				
 			}
 			
+			#footer {
+				padding-top: 50px;
+				padding-bottom: 50px;
+				text-align: center;
+			}
+			
 		</style>
 	</head>
 	<body>
 	
-		<nav class="navbar navbar-expand-lg navbar-light site-header bg-light sticky-top py-1">
+		<nav class="navbar navbar-expand-lg navbar-dark site-header bg-dark sticky-top py-1">
 			<div class="container">
 				<a class="navbar-brand" href="#">H&V</a>
 				<div>
@@ -73,35 +102,17 @@
 				<h1>Heroes And Villains</h1>
 				<h3>Emotional Analysis Generator</h3>
 			
-				<!-- <div id="carouselfaces" class="carousel slide" data-ride="carousel">
-		  			<div class="carousel-inner">
-			    		<div class="carousel-item active">
-			      			<img class="d-block w-100" src="http://i63.tinypic.com/6ymtmx.jpg" alt="First slide">
-			    		</div>
-			    		<div class="carousel-item">
-			      			<img class="d-block w-100" src="http://i68.tinypic.com/2hxsh3.jpg" alt="Second slide">
-			    		</div>
-			    		<div class="carousel-item">
-			      			<img class="d-block w-100" src="http://i67.tinypic.com/2wg6c76.jpg" alt="Third slide">
-			    		</div>
-			    		<div class="carousel-item">
-			      			<img class="d-block w-100" src="http://i67.tinypic.com/29e57j7.jpg" alt="Third slide">
-			    		</div>
-			    		<div class="carousel-item">
-			      			<img class="d-block w-100" src="http://i66.tinypic.com/97le1k.jpg" alt="Third slide">
-			    		</div>
-		  			</div>
-				</div> -->
 			</div>
 			
-			<div class="row">
+			<div class="header-graphic"></div>
+			
+			<div class="row" id="row1">
 				
 				<div class="col-md">
 				
 					<div id="call-to-action">
 						
-						<h2>Get your face</h2>
-						<h2 id="redletter">read.</h2>
+						<h3>Step 1: Get your face <span id="redletter">read.</span></h3>
 					</div>
 					
 					<ul>
@@ -135,6 +146,20 @@
 				
 				</div>
 				
+			</div>
+			
+			<div id="footer" class="row">
+				<div class="col-md">
+					
+				</div>
+				<div class="col-md">
+					<small>©2018 Heroes & Villains Doppelganger Project.</small>
+					<br>
+					<small>All Disney characters are ©Disney. All rights reserved.</small>
+				</div>
+				<div class="col-md">
+			
+				</div>
 			</div>
 
 		
