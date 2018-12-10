@@ -58,7 +58,7 @@
 						<th scope="col">Name</th>
 						<th scope="col">Photo</th>
 						<th scope="col">Movie</th>
-						
+						<th scope="col">Personality Traits</th>
 	
 					</tr>
 				</thead>
@@ -71,6 +71,8 @@
 							<td>${c.name}</td>
 							<td><img src="${c.imgUrl}" width="200px" height="200px"></td>
 							<td>${c.movie}</td>
+							<td>${c.personality}</td>
+							
 							
 						</tr>
 	
