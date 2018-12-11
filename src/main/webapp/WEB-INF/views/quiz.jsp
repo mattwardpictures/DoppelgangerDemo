@@ -162,27 +162,31 @@
 						<ol>
 							<li>	
 								<div class="form-check">
+								
 									<label class="form-check-label">
 									<input class="form-check-input" type="radio" name="question2" value="sadness">						
-									<img src=https://www.pinterest.com/pin/247135098282712098>
+									<img src="https://i.pinimg.com/564x/aa/21/17/aa211752d64f8e5ba5cc48c32b721d57.jpg">
 								</label>
 								</div>
 							</li>
 							
 							<li>	
 								<div class="form-check">
+							
 									<label class="form-check-label">
 									<input class="form-check-input" type="radio" name="question2" value="happiness" >
-									<img src= https://2.bp.blogspot.com/-x6nbnvOIKD8/WmuhiXJHSHI/AAAAAAAAHZI/80UaJ9qngPw2fB4lYx6CBfvyA9hq2h1OwCLcBGAs/s320/Buzz_Lightyear_running.jpg/>
+									<img src= "https://2.bp.blogspot.com/-x6nbnvOIKD8/WmuhiXJHSHI/AAAAAAAAHZI/80UaJ9qngPw2fB4lYx6CBfvyA9hq2h1OwCLcBGAs/s320/Buzz_Lightyear_running.jpg">
 								</label>
 								</div>
+							
 							</li>
 							
 							<li>	
 								<div class="form-check">
+								
 									<label class="form-check-label">
 									<input class="form-check-input" type="radio" name="question2" value="surprise" >
-									<img src= https://vignette.wikia.nocookie.net/disney/images/1/14/Surprised_Alice.png/revision/latest/scale-to-width-down/632?cb=20131125031332/>
+									<img src= "https://vignette.wikia.nocookie.net/disney/images/1/14/Surprised_Alice.png/revision/latest/scale-to-width-down/632?cb=20131125031332/">
 								</label>
 								</div>
 							</li>
@@ -191,7 +195,7 @@
 								<div class="form-check">
 									<label class="form-check-label">
 									<input class="form-check-input" type="radio" name="question2" value="neutral">
-									<img src= https://lumiere-a.akamaihd.net/v1/images/tmb-sq_character-baymax_launch_f406f659.jpeg/>
+									<img src="https://lumiere-a.akamaihd.net/v1/images/tmb-sq_character-baymax_launch_f406f659.jpeg/">
 								</label>
 								</div>
 							</li>
@@ -200,7 +204,7 @@
 								<div class="form-check">
 									<label class="form-check-label">
 									<input class="form-check-input" type="radio" name="question2" value="anger">
-									<img src=https://c8.alamy.com/comp/MABP97/donald-duck-illustration-cartoon-angry-MABP97.jpg>
+									<img src="https://thedisneybeat.files.wordpress.com/2015/03/donald-duck-disney-photo-450x400-dcp-cpna013154.jpg">
 								</label>
 								</div>
 							</li>	
