@@ -123,7 +123,7 @@ public class FaceController {
 	}
 
 	// @RequestMapping("/getresults")
-	private String[] getUserData() throws UnsupportedEncodingException {
+	private String[] getUserData() {
 		String[] userInput = new String[2];
 		userInput[0] = userName;
 		userInput[1] = imageUrl;
@@ -140,6 +140,7 @@ public class FaceController {
 			@RequestParam("question2") String question2, @RequestParam("question3") String question3,
 			@RequestParam("question4") String question4, @RequestParam("question5") String question5) {
 
+		faceScore = getAPIData();
 		double angerChange = faceScore[0];
 		double sadnessChange = faceScore[1];
 		double neutralChange = faceScore[2];
@@ -318,7 +319,7 @@ public class FaceController {
 		ModelAndView mv = new ModelAndView("results");
 
 		int score2 = (int) Math.round(score);
-
+		userInput = getUserData();
 		String name = userInput[0];
 		String imgUrl = userInput[1];
 
