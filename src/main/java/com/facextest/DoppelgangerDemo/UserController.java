@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.facextest.DoppelgangerDemo.Repository.CharacterRepository;
 import com.facextest.DoppelgangerDemo.Repository.UserRepository;
+import com.facextest.DoppelgangerDemo.entity.Characters;
 import com.facextest.DoppelgangerDemo.entity.User;
 
 @Controller
@@ -19,7 +20,7 @@ public class UserController {
 
 	@Autowired
 	UserRepository uR;
-	
+
 	@Autowired
 	CharacterRepository cR;
 
@@ -38,31 +39,29 @@ public class UserController {
 		return new ModelAndView("redirect:/topten");
 
 	}
-	
-	
+
 	@RequestMapping("allusers")
 	public ModelAndView showUsers() {
 		ModelAndView mv = new ModelAndView("allusers", "model", uR.findAll());
+		mv.addObject("characterList", cR.findDistinctName());
 		return mv;
 	}
 
-	
 	@RequestMapping("legends")
-		public ModelAndView showCharacters() {
-			
-			
-			return new ModelAndView("legend", "disney", cR.findAll());
-		}
-	
-//	 @RequestMapping("searchStuff")
-//	 public ModelAndView searchResults(@RequestParam("movie") String movie) {
-//		 
-//		
-//		 
-//		 
-//		 return new ModelAndView("allusers", "model", uR.findByMovie(movie));
-//	 }
-//	
-	
-	
+	public ModelAndView showCharacters() {
+
+		return new ModelAndView("legend", "disney", cR.findAll());
+	}
+
+	@RequestMapping("searchStuff")
+	public ModelAndView searchResults(@RequestParam("charactername") String name) {
+
+		Characters movieList = cR.findByName(name);
+
+		ModelAndView mv =new ModelAndView("allusers", "model", movieList.getUsers());
+		mv.addObject("characterList", cR.findDistinctName());
+
+		return mv;
+	}
+
 }

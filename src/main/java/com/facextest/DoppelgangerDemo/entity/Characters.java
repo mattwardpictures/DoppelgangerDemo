@@ -105,7 +105,7 @@ public class Characters {
 	@Override
 	public String toString() {
 		return "Characters [characterID=" + characterID + ", name=" + name + ", imgUrl=" + imgUrl + ", movie=" + movie
-				+ ", personality=" + personality + ", users=" + users + "]";
+				+ ", personality=" + personality + ", ";
 	}
 
 }
