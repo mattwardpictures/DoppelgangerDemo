@@ -120,11 +120,11 @@
 					<form class="form-group" action="quizresult">
 						<h3>Your birthday is fast approaching, and your idea of attending a big party thrown in your honor is:</h3>
 						<ol>
-							<li><input type="radio" name="question1" value="happiness,0.0">I’m stoked, bring on the cake!</li>
-							<li><input type="radio" name="question1" value="surprise,0.1">Uh-oh, panic poops.</li>
-							<li><input type="radio" name="question1" value="neutral,0.1">I stopped counting after my 1st child.</li>
-							<li><input type="radio" name="question1" value="anger,0.03">Who’s paying?</li>
-							<li><input type="radio" name="question1" value="sadness,0.05">I don’t deserve this.</li>
+							<li><input type="radio" name="question1" value="happiness">I’m stoked, bring on the cake!</li>
+							<li><input type="radio" name="question1" value="surprise">Uh-oh, panic poops.</li>
+							<li><input type="radio" name="question1" value="neutral">I stopped counting after my 1st child.</li>
+							<li><input type="radio" name="question1" value="anger">Who’s paying?</li>
+							<li><input type="radio" name="question1" value="sadness">I don’t deserve this.</li>
 						</ol>
 						
 						<h3>How do you feel before crossing a busy street?</h3>
@@ -133,35 +133,35 @@
 						<ol>
 							<li>	
 								<label>
-									<input type="radio" name="question2" value="sadness,0.05">						
+									<input type="radio" name="question2" value="sadness">						
 									<img src=https://www.pinterest.com/pin/247135098282712098>
 								</label>
 							</li>
 							
 							<li>	
 								<label>
-									<input type="radio" name="question2" value="happiness,0.0" >
+									<input type="radio" name="question2" value="happiness" >
 									<img src= https://2.bp.blogspot.com/-x6nbnvOIKD8/WmuhiXJHSHI/AAAAAAAAHZI/80UaJ9qngPw2fB4lYx6CBfvyA9hq2h1OwCLcBGAs/s320/Buzz_Lightyear_running.jpg/>
 								</label>
 							</li>
 							
 							<li>	
 								<label>
-									<input type="radio" name="question2" value="surprise,0.1" >
+									<input type="radio" name="question2" value="surprise" >
 									<img src= https://vignette.wikia.nocookie.net/disney/images/1/14/Surprised_Alice.png/revision/latest/scale-to-width-down/632?cb=20131125031332/>
 								</label>
 							</li>
 							
 							<li>
 								<label>
-									<input type="radio" name="question2" value="neutral,0.1">
+									<input type="radio" name="question2" value="neutral">
 									<img src= https://lumiere-a.akamaihd.net/v1/images/tmb-sq_character-baymax_launch_f406f659.jpeg/>
 								</label>
 							</li>
 							
 							<li>	
 								<label>
-									<input type="radio" name="question2" value="anger,0.03">
+									<input type="radio" name="question2" value="anger">
 									<img src=https://c8.alamy.com/comp/MABP97/donald-duck-illustration-cartoon-angry-MABP97.jpg>
 								</label>
 							</li>	
@@ -171,29 +171,29 @@
 						
 						<h3>You're cornered by your enemies. Think fast! Weapon of choice?</h3>
 						<ol>
-							<li><input type="radio" name="question3" value="surprise,0.1"> Cast-iron frying pan.</li>
-							<li><input type="radio" name="question3" value="happiness,0.0"> I can control climate, and am therefore, a god.</li>
-							<li><input type="radio" name="question3" value="neutral,0.1"> Not worth the effort, I’m gardening.</li>
-							<li><input type="radio" name="question3" value="anger,0.05"> Withering glare.</li>
-							<li><input type="radio" name="question3" value="sadness,0.03"> Talk with me long enough, and I’ll drag you down with me.</li>
+							<li><input type="radio" name="question3" value="surprise"> Cast-iron frying pan.</li>
+							<li><input type="radio" name="question3" value="happiness"> I can control climate, and am therefore, a god.</li>
+							<li><input type="radio" name="question3" value="neutral"> Not worth the effort, I’m gardening.</li>
+							<li><input type="radio" name="question3" value="anger"> Withering glare.</li>
+							<li><input type="radio" name="question3" value="sadness"> Talk with me long enough, and I’ll drag you down with me.</li>
 						</ol>
 						
 						<h3>It’s 6AM, and the Sun has fired her first peal of orange across the horizon. The new day is on its way inexorably through the blinds, and into your crusty eyeballs—this is your cue to:</h3>
 						<ol>
-							<li><input type="radio" name="question4" value="happiness,0.0">Seize the day; I’m thinking of doing as many as six impossible things before breakfast!</li>
-							<li><input type="radio" name="question4" value="surprise,0.1">Oh crap, I’ve got all that stuff I’ve got to do! (Charges like bull through Pfaltzgraff’s)</li>
-							<li><input type="radio" name="question4" value="neutral,0.1">Gee, I’ve only just noticed how much this blanket feels like heaven… (Hits the snooze)</li>
-							<li><input type="radio" name="question4" value="anger,0.05">Whoever or whatever is trying to wake me up is about meet their end via deadblow mallet.</li>
-							<li><input type="radio" name="question4" value="sadness,0.03">I must invite you… to just leave me alone. (Draws curtains)</li>
+							<li><input type="radio" name="question4" value="happiness">Seize the day; I’m thinking of doing as many as six impossible things before breakfast!</li>
+							<li><input type="radio" name="question4" value="surprise">Oh crap, I’ve got all that stuff I’ve got to do! (Charges like bull through Pfaltzgraff’s)</li>
+							<li><input type="radio" name="question4" value="neutral">Gee, I’ve only just noticed how much this blanket feels like heaven… (Hits the snooze)</li>
+							<li><input type="radio" name="question4" value="anger">Whoever or whatever is trying to wake me up is about meet their end via deadblow mallet.</li>
+							<li><input type="radio" name="question4" value="sadness">I must invite you… to just leave me alone. (Draws curtains)</li>
 						</ol>
 						
 						<h3>Which quote do you identify with the most?</h3>
 						<ol>
-							<li><input type="radio" name="question5" value="neutral,0.1">"Your identity is your most valuable possession. Protect it."!</li>
-							<li><input type="radio" name="question5" value="surprise,0.1">“It’s true love!”</li>
-							<li><input type="radio" name="question5" value="anger,0.05">“I never go back on my word!”</li>
-							<li><input type="radio" name="question5" value="sadness,0.03">“Forever is a long time, and time has a way of changing things.”</li>
-							<li><input type="radio" name="question5" value="happiness,0.0">"Venture outside your comfort zone. The rewards are worth it."</li>
+							<li><input type="radio" name="question5" value="neutral">"Your identity is your most valuable possession. Protect it."!</li>
+							<li><input type="radio" name="question5" value="surprise">“It’s true love!”</li>
+							<li><input type="radio" name="question5" value="anger">“I never go back on my word!”</li>
+							<li><input type="radio" name="question5" value="sadness">“Forever is a long time, and time has a way of changing things.”</li>
+							<li><input type="radio" name="question5" value="happiness">"Venture outside your comfort zone. The rewards are worth it."</li>
 						</ol>
 						
 						<input id="button" class="btn btn-secondary" type = "submit" value = "Submit">
