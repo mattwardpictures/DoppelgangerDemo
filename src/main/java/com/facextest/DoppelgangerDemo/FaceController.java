@@ -342,20 +342,40 @@ public class FaceController {
 			angerChange = 0.0;
 		}
 
+		if (angerChange > 1) {
+			angerChange = 1;
+		}
+
 		if (sadnessChange < 0) {
 			sadnessChange = 0.0;
+		}
+
+		if (sadnessChange > 1) {
+			sadnessChange = 1;
 		}
 
 		if (neutralChange < 0) {
 			neutralChange = 0.0;
 		}
 
+		if (neutralChange > 1) {
+			neutralChange = 1;
+		}
+
 		if (surpriseChange < 0) {
 			surpriseChange = 0.0;
 		}
 
+		if (surpriseChange > 1) {
+			surpriseChange = 1;
+		}
+
 		if (happinessChange < 0) {
 			happinessChange = 0.0;
+		}
+
+		if (happinessChange > 1) {
+			happinessChange = 1;
 		}
 
 		double angerIndex = angerChange * 0.05;
