@@ -48,6 +48,13 @@
 			</div>
 		</nav>
 		
+	<!-- 	<h3>Search by movie</h3>
+<form action ="searchStuff">
+<input type = "text" name = "movie" placeholder = "Enter a movie name">
+<input type = "submit" value = "Search">
+</form>
+		 -->
+		
 		<div class="container">
 	
 			<table class="table">

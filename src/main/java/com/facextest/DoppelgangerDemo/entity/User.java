@@ -24,11 +24,13 @@ public class User {
 	private double overallScore;
 	@Column(name = "id")
 	private Integer characterID;
+	
 
 	@ManyToOne
 	// corresponds to character id
 	@JoinColumn(name = "id", insertable = false, updatable = false)
 	private Characters characters;
+	
 
 	public User() {
 

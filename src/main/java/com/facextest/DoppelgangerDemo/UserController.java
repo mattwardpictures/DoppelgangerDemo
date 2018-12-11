@@ -54,4 +54,15 @@ public class UserController {
 			return new ModelAndView("legend", "disney", cR.findAll());
 		}
 	
+//	 @RequestMapping("searchStuff")
+//	 public ModelAndView searchResults(@RequestParam("movie") String movie) {
+//		 
+//		
+//		 
+//		 
+//		 return new ModelAndView("allusers", "model", uR.findByMovie(movie));
+//	 }
+//	
+	
+	
 }
