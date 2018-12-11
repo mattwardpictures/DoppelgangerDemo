@@ -18,7 +18,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.facextest.DoppelgangerDemo.Repository.CharacterRepository;
 import com.facextest.DoppelgangerDemo.Repository.UserRepository;
 import com.facextest.DoppelgangerDemo.entity.Emotion;
-import com.facextest.DoppelgangerDemo.entity.FaceAttributes;
 import com.facextest.DoppelgangerDemo.entity.FaceWrapper;
 import com.facextest.DoppelgangerDemo.entity.User;
 
@@ -88,7 +87,6 @@ public class FaceController {
 
 	}
 
-	
 	private double[] getAPIData() {
 		Double contempt = 0.0;
 		Double surprise = 0.0;
@@ -99,9 +97,10 @@ public class FaceController {
 		Double anger = 0.0;
 		Double fear = 0.0;
 		response = getFaceMatch(imageUrl);
-		// this is Antonellas fix -- this should not break Matt's logic // but you will need to test
+		// this is Antonellas fix -- this should not break Matt's logic // but you will
+		// need to test
 		if (response.length == 0) {
-			
+
 			contempt = -0.05;
 			surprise = -0.05;
 			happiness = -0.09;
@@ -113,7 +112,6 @@ public class FaceController {
 		} else {
 
 			contempt = (response[0].getFaceAttributes().getEmotion().getContempt());
-
 			surprise = (response[0].getFaceAttributes().getEmotion().getSurprise());
 			happiness = (response[0].getFaceAttributes().getEmotion().getHappiness());
 			neutral = (response[0].getFaceAttributes().getEmotion().getNeutral());
@@ -170,7 +168,8 @@ public class FaceController {
 			faceScore[2] = 0.01;
 			faceScore[3] = 0.01;
 			faceScore[0] = 0.05;
-			//response[0].setFaceAttributes(new FaceAttributes(new Emotion(0.01,.01,.01,.01,.01,.01,.01,.01)));
+			// response[0].setFaceAttributes(new FaceAttributes(new
+			// Emotion(0.01,.01,.01,.01,.01,.01,.01,.01)));
 		}
 		double angerChange = faceScore[0];
 		double sadnessChange = faceScore[1];
@@ -339,6 +338,26 @@ public class FaceController {
 			happinessChange += -0.1;
 		}
 
+		if (angerChange < 0) {
+			angerChange = 0.0;
+		}
+
+		if (sadnessChange < 0) {
+			sadnessChange = 0.0;
+		}
+
+		if (neutralChange < 0) {
+			neutralChange = 0.0;
+		}
+
+		if (surpriseChange < 0) {
+			surpriseChange = 0.0;
+		}
+
+		if (happinessChange < 0) {
+			happinessChange = 0.0;
+		}
+
 		double angerIndex = angerChange * 0.05;
 		double sadnessIndex = sadnessChange * 0.10;
 		double neutralIndex = neutralChange * 0.15;
@@ -354,16 +373,20 @@ public class FaceController {
 		String name = userInput[0];
 		String imgUrl = userInput[1];
 
+		response = getFaceMatch(imgUrl);
+
 		mv.addObject("score", score);
 		if (response.length == 0) {
 			// add extremes here to evaluate to Shrek
-			mv.addObject("results", new Emotion(0.01,.01,.01,.01,.01,.01,.01,.01));
+			mv.addObject("results", new Emotion(0.01, .01, .01, .01, .01, .01, .01, .01));
 			mv.addObject("score", "You messed up!");
 		} else {
 			mv.addObject("results", response[0].getFaceAttributes().getEmotion());
 		}
-		//mv.addObject("results", response[0].getFaceAttributes().getEmotion());
+		// mv.addObject("results", response[0].getFaceAttributes().getEmotion());
 		mv.addObject("ch", cR.findById(score2).orElse(null));
+
+		System.out.println("imgUrl:" + imgUrl);
 
 		mv.addObject("user", name);
 		mv.addObject("url", imgUrl);
