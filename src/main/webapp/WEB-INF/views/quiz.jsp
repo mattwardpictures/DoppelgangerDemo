@@ -76,7 +76,7 @@
 	
 		<nav class="navbar navbar-expand-lg navbar-dark site-header bg-dark sticky-top py-1">
 			<div class="container">
-				<a class="navbar-brand" href="#">H&V</a>
+				<a class="navbar-brand" href="/">H&V</a>
 				<div>
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item dropdown show">
