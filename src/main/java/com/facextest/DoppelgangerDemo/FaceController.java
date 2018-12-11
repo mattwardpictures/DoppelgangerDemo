@@ -116,10 +116,10 @@ public class FaceController {
 //		return userInput;
 //	}
 //
-//	@RequestMapping("/quiz")
-//	public ModelAndView quiz() {
-//		return new ModelAndView("quiz");
-//	}
+	@RequestMapping("/quiz")
+	public ModelAndView quiz() {
+		return new ModelAndView("quiz");
+	}
 
 //	@RequestMapping("/quizresult")
 //	public ModelAndView questionAnswers(@RequestParam("question1") String question1,

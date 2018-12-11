@@ -21,6 +21,10 @@
 				font-size:2em;
 			}
 			
+			#question1 {
+				height:300px;
+			}
+			
 			img {
 				height:300px;
 				width:300px;
@@ -37,22 +41,10 @@
 				line-height: 2;
 			}
 			
-			.header-graphic {
-				min-height: 500px;
-				background-image: url("https://images3.alphacoders.com/637/637817.jpg");
-				background-size: cover;
-				background-repeat: no-repeat;
-				background-position: center;
-			}
-			
 			h1 {
 				font-size: 5em;
 				letter-spacing: -2px;
 				line-height: 1;
-			}
-			
-			h2, h3 {
-				text-align: center;
 			}
 			
 			#row1 {
@@ -118,88 +110,226 @@
 				<div class="col-md">
 					
 					<form class="form-group" action="quizresult">
-						<h3>Your birthday is fast approaching, and your idea of attending a big party thrown in your honor is:</h3>
-						<ol>
-							<li><input type="radio" name="question1" value="happiness">I’m stoked, bring on the cake!</li>
-							<li><input type="radio" name="question1" value="surprise">Uh-oh, panic poops.</li>
-							<li><input type="radio" name="question1" value="neutral">I stopped counting after my 1st child.</li>
-							<li><input type="radio" name="question1" value="anger">Who’s paying?</li>
-							<li><input type="radio" name="question1" value="sadness">I don’t deserve this.</li>
-						</ol>
 						
-						<h3>How do you feel before crossing a busy street?</h3>
+						<div id="question1" class="row">
+						<div class="col-md">
+						<h3>1. Your birthday is fast approaching, and your idea of attending a big party thrown in your honor is:</h3>
+						<ol>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="radio" class="form-check-input" name="question1" value="happiness">I’m stoked, bring on the cake!
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="radio" class="form-check-input" name="question1" value="surprise">Uh-oh, panic poops.
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="radio" class="form-check-input" name="question1" value="neutral">I stopped counting after my 1st child.
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="radio" class="form-check-input" name="question1" value="anger">Who’s paying?
+									</label>	
+								</div>		
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="radio" class="form-check-input" name="question1" value="sadness">I don’t deserve this.
+									</label>
+								</div>
+							</li>
+						</ol>
+						</div>
+						<div class="col-sm"></div>
+						</div>
+						
+						
+						<h3>2. How do you feel before crossing a busy street?</h3>
 						<div class="row">
 						
 						<ol>
 							<li>	
-								<label>
-									<input type="radio" name="question2" value="sadness">						
+								<div class="form-check">
+									<label class="form-check-label">
+									<input class="form-check-input" type="radio" name="question2" value="sadness">						
 									<img src=https://www.pinterest.com/pin/247135098282712098>
 								</label>
+								</div>
 							</li>
 							
 							<li>	
-								<label>
-									<input type="radio" name="question2" value="happiness" >
+								<div class="form-check">
+									<label class="form-check-label">
+									<input class="form-check-input" type="radio" name="question2" value="happiness" >
 									<img src= https://2.bp.blogspot.com/-x6nbnvOIKD8/WmuhiXJHSHI/AAAAAAAAHZI/80UaJ9qngPw2fB4lYx6CBfvyA9hq2h1OwCLcBGAs/s320/Buzz_Lightyear_running.jpg/>
 								</label>
+								</div>
 							</li>
 							
 							<li>	
-								<label>
-									<input type="radio" name="question2" value="surprise" >
+								<div class="form-check">
+									<label class="form-check-label">
+									<input class="form-check-input" type="radio" name="question2" value="surprise" >
 									<img src= https://vignette.wikia.nocookie.net/disney/images/1/14/Surprised_Alice.png/revision/latest/scale-to-width-down/632?cb=20131125031332/>
 								</label>
+								</div>
 							</li>
 							
 							<li>
-								<label>
-									<input type="radio" name="question2" value="neutral">
+								<div class="form-check">
+									<label class="form-check-label">
+									<input class="form-check-input" type="radio" name="question2" value="neutral">
 									<img src= https://lumiere-a.akamaihd.net/v1/images/tmb-sq_character-baymax_launch_f406f659.jpeg/>
 								</label>
+								</div>
 							</li>
 							
 							<li>	
-								<label>
-									<input type="radio" name="question2" value="anger">
+								<div class="form-check">
+									<label class="form-check-label">
+									<input class="form-check-input" type="radio" name="question2" value="anger">
 									<img src=https://c8.alamy.com/comp/MABP97/donald-duck-illustration-cartoon-angry-MABP97.jpg>
 								</label>
+								</div>
 							</li>	
 						</ol>
 						
 						</div>
 						
-						<h3>You're cornered by your enemies. Think fast! Weapon of choice?</h3>
+						<h3>3. You're cornered by your enemies. Think fast! Weapon of choice?</h3>
 						<ol>
-							<li><input type="radio" name="question3" value="surprise"> Cast-iron frying pan.</li>
-							<li><input type="radio" name="question3" value="happiness"> I can control climate, and am therefore, a god.</li>
-							<li><input type="radio" name="question3" value="neutral"> Not worth the effort, I’m gardening.</li>
-							<li><input type="radio" name="question3" value="anger"> Withering glare.</li>
-							<li><input type="radio" name="question3" value="sadness"> Talk with me long enough, and I’ll drag you down with me.</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question3" value="surprise"> Cast-iron frying pan.
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question3" value="happiness"> I can control climate, and am therefore, a god.
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question3" value="neutral"> Not worth the effort, I’m gardening.
+									</label>
+								</div>	
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question3" value="anger"> Withering glare.
+									</label>
+								</div>	
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question3" value="sadness"> Talk with me long enough, and I’ll drag you down with me.
+									</label>
+								</div>
+							</li>
 						</ol>
 						
-						<h3>It’s 6AM, and the Sun has fired her first peal of orange across the horizon. The new day is on its way inexorably through the blinds, and into your crusty eyeballs—this is your cue to:</h3>
+						<h3>4. It’s 6AM, and the Sun has fired her first peal of orange across the horizon. The new day is on its way inexorably through the blinds, and into your crusty eyeballs—this is your cue to:</h3>
 						<ol>
-							<li><input type="radio" name="question4" value="happiness">Seize the day; I’m thinking of doing as many as six impossible things before breakfast!</li>
-							<li><input type="radio" name="question4" value="surprise">Oh crap, I’ve got all that stuff I’ve got to do! (Charges like bull through Pfaltzgraff’s)</li>
-							<li><input type="radio" name="question4" value="neutral">Gee, I’ve only just noticed how much this blanket feels like heaven… (Hits the snooze)</li>
-							<li><input type="radio" name="question4" value="anger">Whoever or whatever is trying to wake me up is about meet their end via deadblow mallet.</li>
-							<li><input type="radio" name="question4" value="sadness">I must invite you… to just leave me alone. (Draws curtains)</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question4" value="happiness">Seize the day; I’m thinking of doing as many as six impossible things before breakfast!
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question4" value="surprise">Oh crap, I’ve got all that stuff I’ve got to do! (Charges like bull through Pfaltzgraff’s)
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question4" value="neutral">Gee, I’ve only just noticed how much this blanket feels like heaven… (Hits the snooze)
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question4" value="anger">Whoever or whatever is trying to wake me up is about meet their end via deadblow mallet.
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question4" value="sadness">I must invite you… to just leave me alone. (Draws curtains)
+									</label>
+								</div>
+							</li>
 						</ol>
 						
-						<h3>Which quote do you identify with the most?</h3>
+						<h3>5. Which quote do you identify with the most?</h3>
 						<ol>
-							<li><input type="radio" name="question5" value="neutral">"Your identity is your most valuable possession. Protect it."!</li>
-							<li><input type="radio" name="question5" value="surprise">“It’s true love!”</li>
-							<li><input type="radio" name="question5" value="anger">“I never go back on my word!”</li>
-							<li><input type="radio" name="question5" value="sadness">“Forever is a long time, and time has a way of changing things.”</li>
-							<li><input type="radio" name="question5" value="happiness">"Venture outside your comfort zone. The rewards are worth it."</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question5" value="neutral">"Your identity is your most valuable possession. Protect it."!
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question5" value="surprise">“It’s true love!”
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question5" value="anger">“I never go back on my word!”
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question5" value="sadness">“Forever is a long time, and time has a way of changing things.”
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="question5" value="happiness">"Venture outside your comfort zone. The rewards are worth it."
+									</label>
+								</div>
+							</li>
 						</ol>
 						
 						<input id="button" class="btn btn-secondary" type = "submit" value = "Submit">
 					</form>
 					
 				</div>
+				
 			
 			</div>
 			
