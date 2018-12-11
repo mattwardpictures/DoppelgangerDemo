@@ -28,7 +28,7 @@ public class User {
 
 	@ManyToOne
 	// corresponds to character id
-	@JoinColumn(name = "id", insertable = false, updatable = false)
+	@JoinColumn(name = "id", insertable = false, updatable = false) // indicative of foreign key
 	private Characters characters;
 	
 

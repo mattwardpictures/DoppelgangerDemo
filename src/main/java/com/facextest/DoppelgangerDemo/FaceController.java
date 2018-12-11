@@ -99,6 +99,7 @@ public class FaceController {
 		response = getFaceMatch(imageUrl);
 		// this is Antonellas fix -- this should not break Matt's logic // but you will
 		// need to test
+		// validation
 		if (response.length == 0) {
 
 			contempt = -0.05;
