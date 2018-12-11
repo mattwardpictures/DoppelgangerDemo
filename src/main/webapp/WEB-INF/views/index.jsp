@@ -50,16 +50,16 @@
 				padding-top: 30px;
 			}
 			
+			#row2 {
+				padding-top: 30px;
+			}
+			
 			#call-to-action {
 				padding-bottom: 20px;
 			}
 			
 			#redletter {
 				color: #fc0000;
-			}
-			#carouselfaces img {
-				max-height: 600px;
-				
 			}
 			
 			#footer {
@@ -150,14 +150,14 @@
 				
 			</div>
 			
-			<div class="row">
+			<div id="row2" class="row">
 	
 				<table class="table">
 		
 					<thead>
 						<tr class="table-active">
 							<th scope="col">Name</th>
-							<th scope="col">Photo</th>
+							<th scope="col">User Photo</th>
 							<th scope="col">Score</th>
 							<th scope="col">Character Name</th>
 							<th scope="col">Photo</th>
