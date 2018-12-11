@@ -150,38 +150,39 @@
 				
 			</div>
 			
-			<div class="container">
+			<div class="row">
 	
-			<table class="table">
-	
-				<thead>
-					<tr class="table-active">
-						<th scope="col">Name</th>
-						<th scope="col">Photo</th>
-						<th scope="col">Score</th>
-						<th scope="col">Character Name</th>
-						<th scope="col">Photo</th>
-	
-					</tr>
-				</thead>
-				
-				<tbody>
-					<c:forEach var="c" items="${ten}">
-	
-						<tr>
-							<td>${c.name}</td>
-							<td><img src="${c.imgUrl}" width="200px" height="200px"></td>
-							<td>${c.overallScore}</td>
-							<td>${c.characters.name}</td>
-							<td><img src="${c.characters.imgUrl}" width="200px" height="200px"></td>
+				<table class="table">
+		
+					<thead>
+						<tr class="table-active">
+							<th scope="col">Name</th>
+							<th scope="col">Photo</th>
+							<th scope="col">Score</th>
+							<th scope="col">Character Name</th>
+							<th scope="col">Photo</th>
+		
 						</tr>
-	
-					</c:forEach>
-	
-				</tbody>
-	
-			</table>
-		</div>
+					</thead>
+					
+					<tbody>
+						<c:forEach var="c" items="${ten}">
+		
+							<tr>
+								<td>${c.name}</td>
+								<td><img src="${c.imgUrl}" width="200px" height="200px"></td>
+								<td>${c.overallScore}</td>
+								<td>${c.characters.name}</td>
+								<td><img src="${c.characters.imgUrl}" width="200px" height="200px"></td>
+							</tr>
+		
+						</c:forEach>
+		
+					</tbody>
+		
+				</table>
+			
+			</div>
 	
 			
 			<div id="footer" class="row">
