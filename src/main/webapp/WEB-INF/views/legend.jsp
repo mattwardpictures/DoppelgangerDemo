@@ -69,7 +69,7 @@
 						<tr>
 							<td>${c.characterID}</td>
 							<td>${c.name}</td>
-							<td><img src="${c.imgUrl}" width="200px" height="200px"></td>
+							<td><a href = "${c.wikipage}"><img src="${c.imgUrl}" width="200px" height="200px"></a></td>
 							<td>${c.movie}</td>
 							<td>${c.personality}</td>
 							

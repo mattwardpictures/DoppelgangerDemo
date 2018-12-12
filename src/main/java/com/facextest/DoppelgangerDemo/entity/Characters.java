@@ -26,6 +26,8 @@ public class Characters {
 	private String imgUrl;
 	private String movie;
 	private String personality;
+	private String wikipage;
+
 
 	@OneToMany(mappedBy = "characters", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<User> users = new ArrayList<>();
@@ -100,6 +102,14 @@ public class Characters {
 
 	public void setUsers(List<User> users) {
 		this.users = users;
+	}
+	
+	public String getWikipage() {
+		return wikipage;
+	}
+
+	public void setWikipage(String wikipage) {
+		this.wikipage = wikipage;
 	}
 
 	@Override

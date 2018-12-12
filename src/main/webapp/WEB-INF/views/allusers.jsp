@@ -87,8 +87,8 @@
 						<td><img src="${c.imgUrl}" width="200px" height="200px"></td>
 						<td>${c.overallScore}</td>
 						<td>${c.characters.name}</td>
-						<td><img src="${c.characters.imgUrl}" width="200px"
-							height="200px"></td>
+						<td><a href = "${c.characters.wikipage}"><img src="${c.characters.imgUrl}" width="200px"
+							height="200px"></a></td>
 						<td>${c.characters.personality}</td>
 					</tr>
 
