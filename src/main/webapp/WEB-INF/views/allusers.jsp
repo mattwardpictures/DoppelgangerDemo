@@ -14,8 +14,18 @@
 
 	.page-header {
 		padding-top: 50px;
-		padding-bottom: 50px;
+		
 		text-align: center;
+	}
+	
+	h1 {
+		font-size: 4em;
+		letter-spacing: -2px;
+		line-height: 1;
+	}
+	
+	.page-header h3 {
+		line-height: 0.8;
 	}
 	
 	#character-picture {
@@ -69,12 +79,31 @@
 
 	<div class="container">
 		
+		<div class="page-header">
+		
+			<h1>User Directory</h1>
+			<br>
+			<h3>See who other users match with</h3>
+			<h3>in the Disney Universe</h3>
+		
+		
+		</div>
+		
 		<div id="search-header" class="row">
 			
 			<div class="col-sm">
 			
-				<h3>Search by character name</h3>
+			</div>
+			
+			<div class="col-sm">
+			
+				<h5>Search by character name</h5>
 
+				
+			</div>
+			
+			<div class="col-sm">
+					
 				<form action="searchStuff">
 					<!-- <input type="text" name="movie" placeholder="Enter a movie name"> -->
 				
@@ -88,17 +117,9 @@
 					<input class="btn btn-primary" type="submit" value="Search">
 				
 				</form>
-				
-			</div>
-			
-			<div class="col-sm">
-					
 			
 			</div>
 			
-			<div class="col-sm">
-			
-			</div>
 			
 			<div class="col-sm">
 			
