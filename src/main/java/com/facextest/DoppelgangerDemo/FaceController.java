@@ -1,6 +1,8 @@
 package com.facextest.DoppelgangerDemo;
 
 import java.io.UnsupportedEncodingException;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -386,7 +388,7 @@ public class FaceController {
 		double happinessIndex = happinessChange * 0.50;
 
 		double score = (angerIndex + sadnessIndex + neutralIndex + surpriseIndex + happinessIndex) * 100;
-
+		
 		ModelAndView mv = new ModelAndView("results");
 
 		int score2 = (int) Math.round(score);
@@ -432,24 +434,5 @@ public class FaceController {
 		return response;
 	}
 
-//	private static Double getScore(FaceWrapper[] response) {
-//		Double contempt = (response[0].getFaceAttributes().getEmotion().getContempt());
-//		Double surprise = (response[0].getFaceAttributes().getEmotion().getSurprise());
-//		Double happiness = (response[0].getFaceAttributes().getEmotion().getHappiness());
-//		Double neutral = (response[0].getFaceAttributes().getEmotion().getNeutral());
-//		Double sadness = (response[0].getFaceAttributes().getEmotion().getSadness());
-//		Double disgust = (response[0].getFaceAttributes().getEmotion().getDisgust());
-//		Double anger = (response[0].getFaceAttributes().getEmotion().getAnger());
-//		Double fear = (response[0].getFaceAttributes().getEmotion().getFear());
-//
-//		double angerIndex = (contempt + disgust + anger) * 0.05;
-//		double sadnessIndex = (sadness + fear) * 0.10;
-//		double neutralIndex = neutral * 0.15;
-//		double surpriseIndex = surprise * 0.20;
-//		double happinessIndex = happiness * 0.50;
-//
-//		double overallScore = (angerIndex + sadnessIndex + neutralIndex + surpriseIndex + happinessIndex) * 100;
-//
-//		return overallScore;
-//	}
+
 }
