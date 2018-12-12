@@ -10,70 +10,74 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/cyborg/bootstrap.min.css">
 <style type="text/css">
-body {
-	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
-p.lead {
-	letter-spacing: 1px;
-}
-
-h3 {
-	font-size: 2em;
-}
-
-#question1 {
-	height: 300px;
-}
-
-img {
-	height: 300px;
-	width: 300px;
-}
-
-.page-header {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	text-align: center;
-}
-
-.page-header h3 {
-	font-size: 2em;
-	line-height: 2;
-}
-
-h1 {
-	font-size: 5em;
-	letter-spacing: -2px;
-	line-height: 1;
-}
-
-#row1 {
-	padding-top: 30px;
-}
-
-#call-to-action {
-	padding-bottom: 20px;
-}
-
-#redletter {
-	color: #fc0000;
-}
-
-#carouselfaces img {
-	max-height: 600px;
-}
-
-#footer {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	text-align: center;
-}
-
-#pictures li {
-	display: inline;
-}
-</style>
+	body {
+		font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	}
+	
+	p.lead {
+		letter-spacing: 1px;
+	}
+	
+	h3 {
+		font-size: 2em;
+	}
+	
+	#question1 {
+		height: 300px;
+	}
+	
+	img {
+		height: 300px;
+		width: 300px;
+	}
+	
+	.page-header {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		text-align: center;
+	}
+	
+	.page-header h3 {
+		font-size: 2em;
+		line-height: 2;
+	}
+	
+	h1 {
+		font-size: 5em;
+		letter-spacing: -2px;
+		line-height: 1;
+	}
+	
+	#row1 {
+		padding-top: 30px;
+	}
+	
+	#call-to-action {
+		padding-bottom: 20px;
+	}
+	
+	#footer {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		text-align: center;
+	}
+	
+	#question2 {
+		text-align: center;
+	}
+	
+	#question2 li {
+		list-style: none;
+		display: inline-block;
+	}
+	
+	#question2 img {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		
+	}
+	
+	</style>
 </head>
 
 <body>
@@ -167,27 +171,23 @@ h1 {
 
 
 					<h3>2. How do you feel before crossing a busy street?</h3>
-					<div class="row" id="pictures">
+					<div class="row" id="question2">
 
-						<ol>
+						<ul>
 							<li>
 								<div class="form-check">
-
-									<label class="form-check-label"> <input
-										class="form-check-input" type="radio" name="question2"
-										value="sadness"> <img
-										src="https://i.pinimg.com/564x/aa/21/17/aa211752d64f8e5ba5cc48c32b721d57.jpg">
+									<label class="btn btn-warning form-check-label"> 
+										<input class="form-check-input" type="radio" name="question2" value="sadness"> 
+										<img src="https://i.pinimg.com/564x/aa/21/17/aa211752d64f8e5ba5cc48c32b721d57.jpg">
 									</label>
 								</div>
 							</li>
 
 							<li>
 								<div class="form-check">
-
-									<label class="form-check-label"> <input
-										class="form-check-input" type="radio" name="question2"
-										value="happiness"> <img
-										src="https://2.bp.blogspot.com/-x6nbnvOIKD8/WmuhiXJHSHI/AAAAAAAAHZI/80UaJ9qngPw2fB4lYx6CBfvyA9hq2h1OwCLcBGAs/s320/Buzz_Lightyear_running.jpg">
+									<label class="btn btn-primary form-check-label"> 
+										<input class="form-check-input" type="radio" name="question2" value="happiness"> 
+										<img src="https://2.bp.blogspot.com/-x6nbnvOIKD8/WmuhiXJHSHI/AAAAAAAAHZI/80UaJ9qngPw2fB4lYx6CBfvyA9hq2h1OwCLcBGAs/s320/Buzz_Lightyear_running.jpg">
 									</label>
 								</div>
 
@@ -195,35 +195,31 @@ h1 {
 
 							<li>
 								<div class="form-check">
-
-									<label class="form-check-label"> <input
-										class="form-check-input" type="radio" name="question2"
-										value="surprise"> <img
-										src="https://vignette.wikia.nocookie.net/disney/images/1/14/Surprised_Alice.png/revision/latest/scale-to-width-down/632?cb=20131125031332/">
+									<label class="btn btn-success form-check-label"> 
+										<input class="form-check-input" type="radio" name="question2" value="surprise"> 
+										<img src="https://vignette.wikia.nocookie.net/disney/images/1/14/Surprised_Alice.png/revision/latest/scale-to-width-down/632?cb=20131125031332/">
 									</label>
 								</div>
 							</li>
 
 							<li>
 								<div class="form-check">
-									<label class="form-check-label"> <input
-										class="form-check-input" type="radio" name="question2"
-										value="neutral"> <img
-										src="https://lumiere-a.akamaihd.net/v1/images/tmb-sq_character-baymax_launch_f406f659.jpeg/">
+									<label class="btn btn-secondary form-check-label"> 
+										<input class="form-check-input" type="radio" name="question2" value="neutral"> 
+										<img src="https://lumiere-a.akamaihd.net/v1/images/tmb-sq_character-baymax_launch_f406f659.jpeg/">
 									</label>
 								</div>
 							</li>
 
 							<li>
 								<div class="form-check">
-									<label class="form-check-label"> <input
-										class="form-check-input" type="radio" name="question2"
-										value="anger"> <img
-										src="https://thedisneybeat.files.wordpress.com/2015/03/donald-duck-disney-photo-450x400-dcp-cpna013154.jpg">
+									<label class="btn btn-danger form-check-label"> 
+										<input class="form-check-input" type="radio" name="question2" value="anger"> 
+										<img src="https://thedisneybeat.files.wordpress.com/2015/03/donald-duck-disney-photo-450x400-dcp-cpna013154.jpg">
 									</label>
 								</div>
 							</li>
-						</ol>
+						</ul>
 
 					</div>
 
