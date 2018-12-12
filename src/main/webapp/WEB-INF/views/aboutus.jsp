@@ -11,32 +11,45 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/litera/bootstrap.min.css">
 <style type="text/css">
-.page-header {
-	padding-top: 150px;
-	padding-bottom: 150px;
-	text-align: center;
-}
+	
+	
+	body {
+		text-align: center;
+	}
+	
+	.page-header {
+		padding-top: 150px;
+		padding-bottom: 150px;
+		text-align: center;
+	}
+	
+	h1 {
+		font-size: 4em;
+		letter-spacing: -2px;
+	}
+	
+	h2, h3 {
+		text-align: center;
+	}
+	
+	#call-to-action {
+		padding-bottom: 20px;
+	}
+	
+	#redletter {
+		color: #fc0000;
+	}
+	
+	#carouselfaces img {
+		max-height: 600px;
+	}
+	
+	#footer {
+		padding-top: 150px;
+		padding-bottom: 50px;
+		text-align: center;
+	}
 
-h1 {
-	font-size: 4em;
-	letter-spacing: -2px;
-}
-
-h2, h3 {
-	text-align: center;
-}
-
-#call-to-action {
-	padding-bottom: 20px;
-}
-
-#redletter {
-	color: #fc0000;
-}
-
-#carouselfaces img {
-	max-height: 600px;
-}
 </style>
 </head>
 
@@ -121,6 +134,20 @@ h2, h3 {
 				
 				</div>
 			
+			</div>
+			
+			<div id="footer" class="row">
+					<div class="col-md">
+						
+					</div>
+					<div class="col-md">
+						<small>©2018 Heroes & Villains Doppelganger Project.</small>
+						<br>
+						<small>All Disney characters are ©Disney. All rights reserved.</small>
+					</div>
+					<div class="col-md">
+				
+					</div>
 			</div>
 		
 			
