@@ -20,6 +20,20 @@
 					border-radius: 50px;
 				}
 				
+				img {
+					border-radius: 50px;
+				}
+				
+				h1 {
+					text-align: center;
+				}
+				
+				#footer {
+					padding-top: 50px;
+					padding-bottom: 50px;
+					text-align: center;
+				}
+				
 			</style>
 	</head>
 	<body>
@@ -49,7 +63,14 @@
 		</nav>
 		
 		<div class="container">
-	
+			
+			<div class="page-header">
+			
+				<h1>Character Legend</h1>
+			
+			</div>
+			
+			
 			<table class="table">
 	
 				<thead>
@@ -81,6 +102,17 @@
 				</tbody>
 	
 			</table>
+			
+			<div id="footer" class="row">
+			<div class="col-md"></div>
+			<div class="col-md">
+				<small>©2018 Heroes & Villains Doppelganger Project.</small> <br>
+				<small>All Disney characters are ©Disney. All rights
+					reserved.</small>
+			</div>
+			<div class="col-md"></div>
+		</div>
+			
 		</div>
 	
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

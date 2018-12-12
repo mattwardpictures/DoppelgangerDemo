@@ -46,12 +46,20 @@
 				text-align: center;
 			}
 			
+			h3.smaller {
+				font-size: 2em;
+			}
+			
 			#row1 {
 				padding-top: 30px;
 			}
 			
 			#row2 {
 				padding-top: 30px;
+			}
+			
+			img {
+				border-radius: 50px;
 			}
 			
 			#call-to-action {
@@ -115,13 +123,14 @@
 					<div id="call-to-action">
 						
 						<h3>Step 1: Get your face <span id="redletter">read.</span></h3>
+						<h3 class="smaller">Don't worry, it's painless.</h3>
 					</div>
 					
 					<ul>
 						<li>Type your name in the form below.</li>
 						<li>Upload your picture into the TinyPic app.</li>
 						<li>Copy and paste your picture URL into the form.</li>
-						<li>Press submit and get analyzed.<br>Don't worry, it's painless.</li>
+						<li>Press submit and get analyzed.</li>
 					</ul>
 					
 				    <form class="form-group" action = "getresults">
@@ -151,6 +160,8 @@
 			</div>
 			
 			<div id="row2" class="row">
+	
+				<h2>10 Most Recent</h2>
 	
 				<table class="table">
 		

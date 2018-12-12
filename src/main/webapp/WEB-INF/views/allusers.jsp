@@ -26,6 +26,16 @@
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
+	
+	img {
+		border-radius: 50px;
+	}
+	
+	#footer {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		text-align: center;
+	}
 
 </style>
 </head>
@@ -105,7 +115,7 @@
 			<thead>
 				<tr class="table-active">
 					<th scope="col">Name</th>
-					<th scope="col">Photo</th>
+					<th scope="col">User Photo</th>
 					<th scope="col">Score</th>
 					<th scope="col">Character Name</th>
 					<th scope="col">Photo</th>
@@ -132,6 +142,18 @@
 			</tbody>
 
 		</table>
+		
+		<div id="footer" class="row">
+			<div class="col-md"></div>
+			<div class="col-md">
+				<small>©2018 Heroes & Villains Doppelganger Project.</small> <br>
+				<small>All Disney characters are ©Disney. All rights
+					reserved.</small>
+			</div>
+			<div class="col-md"></div>
+		</div>
+		
+		
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
