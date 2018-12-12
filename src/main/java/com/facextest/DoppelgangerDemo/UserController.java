@@ -35,11 +35,12 @@ public class UserController {
 			RedirectAttributes redirect) {
 		User u1 = new User(name, imgUrl, overallScore, characterID);
 		uR.save(u1);
-		redirect.addFlashAttribute("saved", "Saved succesfully");
-		return new ModelAndView("redirect:/topten");
+
+		return new ModelAndView("redirect:/allusers");
 
 	}
 
+	
 	@RequestMapping("allusers")
 	public ModelAndView showUsers() {
 		ModelAndView mv = new ModelAndView("allusers", "model", uR.findAll());

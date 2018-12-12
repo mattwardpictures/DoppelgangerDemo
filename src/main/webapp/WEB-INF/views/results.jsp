@@ -168,7 +168,7 @@
 							class="btn btn-primary" type="Submit" value="Save Results">
 					</form>
 			
-					${saved} <br> <a href="allusers" class="btn btn-primary">See all results</a>
+				 <br> <a href="allusers" class="btn btn-primary">See all results</a>
 				
 				
 				</div>
