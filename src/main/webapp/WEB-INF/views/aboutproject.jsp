@@ -36,6 +36,13 @@
 		#carouselfaces img {
 			max-height: 600px;
 		}
+		
+		#footer {
+			padding-top: 50px;
+			padding-bottom: 50px;
+			text-align: center;
+		}
+		
 		</style>
 	</head>
 	<body>
@@ -86,6 +93,20 @@
 				
 				</div>
 			
+			</div>
+			
+			<div id="footer" class="row">
+				<div class="col-md">
+					
+				</div>
+				<div class="col-md">
+					<small>©2018 Heroes & Villains Doppelganger Project.</small>
+					<br>
+					<small>All Disney characters are ©Disney. All rights reserved.</small>
+				</div>
+				<div class="col-md">
+			
+				</div>
 			</div>
 		
 		

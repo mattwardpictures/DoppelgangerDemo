@@ -18,6 +18,10 @@
 				letter-spacing: 1px;
 			}
 			
+			#site {
+				padding-bottom: 40px;
+			}
+			
 			.page-header {
 				padding-top: 50px;
 				text-align: center;
@@ -71,9 +75,11 @@
 			}
 			
 			#footer {
+				border-top: 1px solid #3d3d3d;
 				padding-top: 50px;
 				padding-bottom: 50px;
 				text-align: center;
+				background-color: #2d2d2d;
 			}
 			
 		</style>
@@ -103,7 +109,7 @@
 			</div>
 		</nav>
 	
-		<div class="container">
+		<div id="site" class="container">
 			
 			<div class="page-header">
 			
@@ -163,7 +169,7 @@
 	
 				<h2>10 Most Recent</h2>
 	
-				<table class="table">
+				<table class="table table-striped">
 		
 					<thead>
 						<tr class="table-active">
@@ -196,21 +202,22 @@
 			</div>
 	
 			
-			<div id="footer" class="row">
-				<div class="col-md">
-					
-				</div>
-				<div class="col-md">
-					<small>©2018 Heroes & Villains Doppelganger Project.</small>
-					<br>
-					<small>All Disney characters are ©Disney. All rights reserved.</small>
-				</div>
-				<div class="col-md">
-			
-				</div>
-			</div>
 
 		
+		</div>
+		
+		<div id="footer" class="row">
+			<div class="col-md">
+					
+			</div>
+			<div class="col-md">
+				<small>©2018 Heroes & Villains Doppelganger Project.</small>
+				<br>
+				<small>All Disney characters are ©Disney. All rights reserved.</small>
+			</div>
+			<div class="col-md">
+		
+			</div>
 		</div>
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

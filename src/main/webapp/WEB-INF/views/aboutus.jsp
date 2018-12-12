@@ -94,6 +94,8 @@
 			
 			<div class="row">
 			
+				<div class="col-sm"></div>
+			
 				<div class="col-md">
 				
 					<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
@@ -111,11 +113,15 @@
 					</div>
 				
 				</div>
+				
+				<div class="col-sm"></div>
 			
 			</div>
 			
 			<div class="row">
 			
+				<div class="col-sm"></div>
+				
 				<div class="col-md">
 				
 					<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
@@ -133,6 +139,8 @@
 					</div>
 				
 				</div>
+				
+				<div class="col-sm"></div>
 			
 			</div>
 			
