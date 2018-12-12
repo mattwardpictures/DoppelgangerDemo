@@ -11,15 +11,22 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/litera/bootstrap.min.css">
 <style type="text/css">
-.page-header {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	text-align: center;
-}
 
-#character-picture {
-	border-radius: 50px;
-}
+	.page-header {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		text-align: center;
+	}
+	
+	#character-picture {
+		border-radius: 50px;
+	}
+	
+	#search-header {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
 </style>
 </head>
 <body>
@@ -48,22 +55,50 @@
 		</div>
 	</nav>
 
-	<h3>Search by character name</h3>
-	<form action="searchStuff">
-		<!-- <input type="text" name="movie" placeholder="Enter a movie name"> -->
-
-		<select name="charactername">
-			<c:forEach var="name" items="${characterList}">
-				<option value ="${name}">${name}</option>
-			</c:forEach>
-
-		</select> <input type="submit" value="Search">
-
-
-	</form>
 
 
 	<div class="container">
+		
+		<div id="search-header" class="row">
+			
+			<div class="col-sm">
+			
+				<h3>Search by character name</h3>
+
+				<form action="searchStuff">
+					<!-- <input type="text" name="movie" placeholder="Enter a movie name"> -->
+				
+					<select class="form-control" name="charactername">
+						<c:forEach var="name" items="${characterList}">
+							<option value ="${name}">${name}</option>
+						</c:forEach>
+				
+					</select>
+					<br> 
+					<input class="btn btn-primary" type="submit" value="Search">
+				
+				</form>
+				
+			</div>
+			
+			<div class="col-sm">
+					
+			
+			</div>
+			
+			<div class="col-sm">
+			
+			</div>
+			
+			<div class="col-sm">
+			
+			</div>
+		
+		
+		
+		
+		</div>
+		
 
 		<table class="table">
 
