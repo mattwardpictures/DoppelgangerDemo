@@ -165,7 +165,7 @@
 	
 				<h2>10 Most Recent</h2>
 	
-				<table class="table table-striped">
+				<table class="table table-striped table-hover">
 		
 					<thead>
 						<tr class="table-active">

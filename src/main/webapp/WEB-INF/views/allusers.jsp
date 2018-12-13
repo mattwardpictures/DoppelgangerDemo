@@ -14,13 +14,22 @@
 
 	.page-header {
 		padding-top: 50px;
-		
+		padding-bottom: 30px;
 		text-align: center;
+	}
+	
+	#header-box {
+		color: #ffffff;
+		text-shadow: 0px 2px 4px #000000;
+		background-image: url("https://d1xfgk3mh635yx.cloudfront.net/sites/default/files/styles/original/public/image/featured/1047928-disney-modifies-princess-tiana-ralph-breaks-internet-amid-whitewashing-criticism.jpg?itok=c634uzsS");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 	
 	h1 {
 		font-size: 4em;
-		letter-spacing: -2px;
+		letter-spacing: -1px;
 		line-height: 1;
 	}
 	
@@ -53,7 +62,7 @@
 
 
 	<nav
-		class="navbar navbar-expand-lg navbar-light site-header bg-light sticky-top py-1">
+		class="navbar navbar-expand-lg navbar-light site-header bg-light sticky-top py-1 shadow-sm">
 		<div class="container">
 			<a class="navbar-brand" href="/">H&V</a>
 			<div>
@@ -79,59 +88,59 @@
 
 	<div class="container">
 		
-		<div class="page-header">
+		<div id="header-box">
 		
-			<h1>User Directory</h1>
-			<br>
-			<h3>See who other users match with</h3>
-			<h3>in the Disney Universe</h3>
-		
-		
-		</div>
-		
-		<div id="search-header" class="row">
+			<div class="page-header">
 			
-			<div class="col-sm">
+				<h1>User Directory</h1>
+				<br>
+				<h3>See who other users match with</h3>
+				<h3>in the Disney Universe</h3>
+			
 			
 			</div>
 			
-			<div class="col-sm">
-			
-				<h5>Search by character name</h5>
-
+			<div id="search-header" class="row">
 				
-			</div>
-			
-			<div class="col-sm">
+				<div class="col-sm">
+				
+				</div>
+				
+				<div class="col-sm">
+				
+					<h5>Search by character name</h5>
+	
 					
-				<form action="searchStuff">
-					<!-- <input type="text" name="movie" placeholder="Enter a movie name"> -->
+				</div>
 				
-					<select class="form-control" name="charactername">
-						<c:forEach var="name" items="${characterList}">
-							<option value ="${name}">${name}</option>
-						</c:forEach>
+				<div class="col-sm">
+						
+					<form action="searchStuff">
+						<!-- <input type="text" name="movie" placeholder="Enter a movie name"> -->
+					
+						<select class="form-control" name="charactername">
+							<c:forEach var="name" items="${characterList}">
+								<option value ="${name}">${name}</option>
+							</c:forEach>
+					
+						</select>
+						<br> 
+						<input class="btn btn-primary" type="submit" value="Search">
+					
+					</form>
 				
-					</select>
-					<br> 
-					<input class="btn btn-primary" type="submit" value="Search">
+				</div>
 				
-				</form>
+				
+				<div class="col-sm">
+				
+				</div>
 			
 			</div>
-			
-			
-			<div class="col-sm">
-			
-			</div>
-		
-		
-		
 		
 		</div>
-		
 
-		<table class="table table-striped">
+		<table class="table table-striped table-hover">
 
 			<thead>
 				<tr class="table-active">

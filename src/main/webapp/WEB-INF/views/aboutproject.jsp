@@ -47,7 +47,7 @@
 	</head>
 	<body>
 	
-		<nav class="navbar navbar-expand-lg navbar-light site-header bg-light sticky-top py-1">
+		<nav class="navbar navbar-expand-lg navbar-light site-header bg-light sticky-top py-1 shadow-sm">
 			<div class="container">
 				<a class="navbar-brand" href="/">H&V</a>
 				<div>
