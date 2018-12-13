@@ -18,10 +18,6 @@
 				letter-spacing: 1px;
 			}
 			
-			#site {
-				padding-bottom: 40px;
-			}
-			
 			.page-header {
 				padding-top: 50px;
 				text-align: center;
@@ -59,7 +55,7 @@
 			}
 			
 			#row2 {
-				padding-top: 30px;
+				padding-top: 50px;
 			}
 			
 			img {
@@ -75,11 +71,11 @@
 			}
 			
 			#footer {
-				border-top: 1px solid #3d3d3d;
 				padding-top: 50px;
 				padding-bottom: 50px;
+				border-top: 1px solid #3d3d3d;
+				letter-spacing: 0.8px;
 				text-align: center;
-				background-color: #2d2d2d;
 			}
 			
 		</style>
@@ -203,22 +199,22 @@
 	
 			
 
+			<div id="footer" class="row">
+				<div class="col-md">
+						
+				</div>
+				<div class="col-md">
+					<small>©2018 Heroes & Villains Doppelganger Project.</small>
+					<br>
+					<small>All Disney characters are ©Disney. All rights reserved.</small>
+				</div>
+				<div class="col-md">
+			
+				</div>
+			</div>
 		
 		</div>
 		
-		<div id="footer" class="row">
-			<div class="col-md">
-					
-			</div>
-			<div class="col-md">
-				<small>©2018 Heroes & Villains Doppelganger Project.</small>
-				<br>
-				<small>All Disney characters are ©Disney. All rights reserved.</small>
-			</div>
-			<div class="col-md">
-		
-			</div>
-		</div>
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
